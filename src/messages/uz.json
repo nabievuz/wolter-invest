@@ -1,0 +1,627 @@
+{
+  "meta": {
+    "title": "Wolter Invest — Aktivga egalik qiling, sof foydadan ulush oling",
+    "description": "Wolter — Toshkentdagi batareya almashtirish va e-bike tarmog'i. Islom moliyasi (Ijarah) asosida jismoniy aktivlarga egalik qiling va oylik sof foydadan ulush oling. Asset-backed, equity emas."
+  },
+  "nav": {
+    "problem": "Muammo",
+    "how": "Qanday ishlaydi",
+    "structure": "Struktura",
+    "calc": "Kalkulyator",
+    "risks": "Risklar",
+    "team": "Jamoa",
+    "cta": "Hujjatlar to'plami"
+  },
+  "hero": {
+    "badge": "Islom moliyasi (Ijarah) · Asset-backed",
+    "title1": "Daromad keltiruvchi aktivlarga egalik qiling —",
+    "title2": "sof foydadan ulush oling.",
+    "lead": "Wolter — Toshkentdagi batareya almashtirish va e-bike tarmog'i. Siz aktivlarni moliyalashtirasiz va egalik qilasiz, biz boshqaramiz.",
+    "chip1_unit": "oy",
+    "chip1_label": "Pul to'liq qaytishi (payback)",
+    "chip2_unit": "%",
+    "chip2_label": "Prognozli IRR · yillik",
+    "chip3_unit": "+",
+    "chip3_label": "Jonli pilot foydalanuvchi",
+    "cta1": "Daromadni hisoblang",
+    "cta2": "Hujjatlar to'plami",
+    "trust": "709+ foydalanuvchi · jonli pilot · Stanford & InfinBank maslahatchilari",
+    "disclaimer": "Raqamlar — joriy pilot run-rate'iga asoslangan illustrativ proyeksiya. Daromad haqiqiy sof foydaga bog'liq va kafolatlanmagan.",
+    "pillSplit": "foyda taqsimoti"
+  },
+  "ticker": [
+    "709+ faol haydovchi",
+    "20 almashtirish stantsiyasi",
+    "7,440+ batareya almashtirish",
+    "48 kun pilot ma'lumoti",
+    "75% prognozli IRR",
+    "14 oylik payback",
+    "$14,710 bir klaster",
+    "30 klaster mavjud",
+    "Islom moliyasiga mos",
+    "Aktiv bilan ta'minlangan daromad"
+  ],
+  "problem": {
+    "eyebrow": "Muammo",
+    "title": "Kuryer uchun batareya — eng katta to'siq.",
+    "subtitle": "Uch narsa kuryerning daromadini cheklaydi:",
+    "cards": [
+      {
+        "title": "Zaryad vaqti",
+        "text": "Batareyani quvvatlash soatlab vaqt oladi — bu vaqtda kuryer ishlamaydi va daromad to'xtaydi."
+      },
+      {
+        "title": "Batareya narxi",
+        "text": "O'z batareyasini sotib olish — katta xarajat. Ko'p kuryerda bunday mablag' yo'q."
+      },
+      {
+        "title": "Downtime",
+        "text": "Batareya tugasa yoki buzilsa — buyurtma yo'q, daromad yo'q. To'g'ridan-to'g'ri yo'qotish."
+      }
+    ],
+    "bannerPre": "Wolter buni hal qiladi:",
+    "bannerStrong": "batareya xizmat sifatida (BaaS)",
+    "bannerPost": "— sekundlarda almashtirish, ~100% uptime."
+  },
+  "market": {
+    "eyebrow": "Nega hozir",
+    "title": "Yetkazib berish iqtisodi o'smoqda — kuryerga ishonchli quvvat kerak.",
+    "cards": [
+      {
+        "title": "📈 Yetkazib berish bumi",
+        "text": "E-commerce va food delivery Toshkentda tez o'smoqda — kuryerlar soni va kunlik qatnov ortib bormoqda."
+      },
+      {
+        "title": "⚡ Elektrga o'tish",
+        "text": "Benzin mototsikldan elektro e-bike'ga o'tish tezlashmoqda — quvvat va downtime asosiy to'siq bo'lib qolmoqda."
+      },
+      {
+        "title": "🔋 Batareya iqtisodi",
+        "text": "Almashtirish modeli downtime'ni nolga tushiradi va katta xarajatni boshqariladigan oylik to'lovga aylantiradi."
+      }
+    ],
+    "note": "Aniq bozor hajmi (TAM/SAM) raqamlari mustaqil tadqiqot bilan tasdiqlanmoqda — bu sahifada taxminiy bozor raqamlari ko'rsatilmaydi."
+  },
+  "how": {
+    "eyebrow": "Qanday ishlaydi",
+    "title": "BaaS + e-bike — bitta ekotizim.",
+    "subtitle": "Sarmoyaning atomar birligi — bitta balanslangan klaster:",
+    "products": [
+      {
+        "qty": "× 1",
+        "name": "Kabinet",
+        "desc": "Batareya almashtirish stantsiyasi — IoT, GPS va masofadan boshqaruv bilan."
+      },
+      {
+        "qty": "× 14",
+        "name": "E-bike",
+        "desc": "Kuryer uchun elektro-velosiped — almashtiriladigan batareya bilan ishlaydi."
+      },
+      {
+        "qty": "× 21",
+        "name": "Batareya",
+        "desc": "Almashtiriladigan batareya — 1.5 : 1 nisbatda uzluksiz ishlash buferi."
+      }
+    ],
+    "eq": [
+      "1 Kabinet",
+      "14 E-bike",
+      "21 Batareya"
+    ],
+    "eqResult": "1 Klaster · $14,710",
+    "streams": [
+      {
+        "tag": "A",
+        "title": "Swap obuna + PAYG",
+        "text": "Kuryer batareyani sekundlarda almashtiradi — oylik obuna yoki har gal to'lov (pay-as-you-go)."
+      },
+      {
+        "tag": "B",
+        "title": "E-bike ijara",
+        "text": "Kuryer e-bike'ni moslashuvchan muddatga ijaraga oladi (7 / 14 / 30 / 60 kun)."
+      }
+    ],
+    "ratioPre": "Nisbat majburiy:",
+    "ratioStrong": "batareya : e-bike = 1.5 : 1",
+    "ratioPost": "— uzluksiz ishlash uchun zaxira buferi."
+  },
+  "compare": {
+    "eyebrow": "Nega e-bike aktivi",
+    "title": "Ko'chmas mulk — yillar. Wolter klasteri — oylar.",
+    "subtitle": "Aktivlar qancha tez o'zini oqlaydi:",
+    "cols": [
+      "Aktiv",
+      "Sarmoya",
+      "Yillik daromad",
+      "Payback"
+    ],
+    "rows": [
+      {
+        "asset": "Bank depoziti (UZS)",
+        "invest": "—",
+        "annual": "~22%",
+        "payback": "yo'q (yield)",
+        "hot": false
+      },
+      {
+        "asset": "Ko'chmas mulk (ijara)",
+        "invest": "—",
+        "annual": "~9%",
+        "payback": "~130 oy",
+        "hot": false
+      },
+      {
+        "asset": "Wolter klasteri",
+        "invest": "$14,710",
+        "annual": "75% IRR",
+        "payback": "14 oy",
+        "hot": true
+      }
+    ],
+    "note": "Wolter raqamlari — joriy pilot run-rate'iga asoslangan proyeksiya, kafolat emas. Bank/ko'chmas mulk foizlari — taqqoslash uchun taxminiy bozor ko'rsatkichlari."
+  },
+  "traction": {
+    "eyebrow": "Isbot",
+    "title": "Taxmin emas — ishlayotgan tarmoq.",
+    "stats": [
+      {
+        "value": 709,
+        "suffix": "+",
+        "label": "ro'yxatdan o'tgan foydalanuvchi"
+      },
+      {
+        "value": 200,
+        "suffix": "+",
+        "label": "jonli e-bike"
+      },
+      {
+        "value": 20,
+        "suffix": "",
+        "label": "ishlayotgan kabinet"
+      },
+      {
+        "value": 7440,
+        "suffix": "",
+        "label": "batareya almashtirish"
+      }
+    ],
+    "source": "Manba: 48 kunlik pilot · 20 kabinet, 200 e-bike, 300 batareya · 2025"
+  },
+  "structure": {
+    "eyebrow": "Investitsiya strukturasi",
+    "title": "Siz aktivga egalik qilasiz — biz boshqaramiz.",
+    "steps": [
+      {
+        "title": "Moliyalashtirish",
+        "text": "Siz aktiv to'plamini moliyalashtirasiz (ijara asosida)."
+      },
+      {
+        "title": "Egalik",
+        "text": "Barcha jihoz muddat davomida sizning mulkingiz — nomingizga."
+      },
+      {
+        "title": "Operatsiya",
+        "text": "Wolter kuryerlarga beradi, texxizmat va marketing qiladi."
+      },
+      {
+        "title": "Daromad",
+        "text": "Payback'gacha 70%, keyin 48-oygacha 30% sof foyda."
+      }
+    ],
+    "phase1Tag": "Faza 1 · 70%",
+    "phase1": "Payback'gacha: oylik sof foydaning 70%'i investorga — kapital tezlashtirilgan qaytadi.",
+    "phase2Tag": "Faza 2 · 30%",
+    "phase2": "Payback'dan 48-oygacha: 30% investorga — toza sof foyda.",
+    "iqtinoTag": "✓ Iqtino",
+    "iqtino": "48 oy oxirida aktivlar Wolter'ga o'tadi (lease-to-own).",
+    "zoneYouTitle": "Sizning zonangiz",
+    "zoneYou": [
+      "Kapital",
+      "Oylik hisobot olish",
+      "Shaffof monitoring"
+    ],
+    "zoneWolterTitle": "Wolter zonasi",
+    "zoneWolter": [
+      "To'liq operatsiya",
+      "Texxizmat va marketing",
+      "Hisobot va audit"
+    ],
+    "islomBadge": "☪ Islom moliyasi · Ijarah",
+    "islomText": "Struktura Islom moliyasi tamoyillariga muvofiq loyihalashtirilgan — Ijarah va Ijarah Muntahia Bittamleek (lease-to-own) modeli, AAOIFI №9 standartiga yo'naltirilgan. Aktiv investor nomida, egalik xavfini investor ko'taradi, iqtino alohida va'da bilan rasmiylashtiriladi."
+  },
+  "ownership": {
+    "eyebrow": "Egalik va himoya",
+    "title": "Aniq nimaga egasiz — va nima himoya qiladi.",
+    "cards": [
+      {
+        "title": "🏷️ Nimaga egasiz",
+        "text": "Jismoniy aktivlar (kabinet, e-bike, batareya) sizning nomingizda ro'yxatdan o'tadi. Equity emas — ijara orqali daromad keltiruvchi mulk."
+      },
+      {
+        "title": "🛰️ Wolter to'xtasa",
+        "text": "Aktiv sizniki bo'lib qoladi. Har bir kabinetda GPS va masofadan boshqaruv — joylashuvi va holati kuzatiladi."
+      },
+      {
+        "title": "↗️ Exit / o'tkazish",
+        "text": "Aktivni boshqa operatorga ijaraga berish, sotish yoki tarmoqni o'tkazish mumkin. Iqtino bo'yicha 48-oyda egalik Wolterga o'tadi."
+      }
+    ],
+    "note": "Sug'urta, kastodiya va aktiv ro'yxati tafsilotlari due diligence paytida hujjat bilan taqdim etiladi."
+  },
+  "calc": {
+    "eyebrow": "Kalkulyator",
+    "title": "Qancha qo'ysangiz — qancha qaytadi.",
+    "subtitle": "Klaster sonini va stsenariyni tanlang — natija jonli yangilanadi.",
+    "clustersLabel": "Klasterlar soni",
+    "clustersUnit": "klaster",
+    "presetFull": "to'liq",
+    "scenarioLabel": "Stsenariy",
+    "scenarios": {
+      "CONS": {
+        "name": "Konservativ",
+        "hint": "−15% talab"
+      },
+      "BASE": {
+        "name": "Standart",
+        "hint": "real run-rate"
+      },
+      "UP": {
+        "name": "Optimistik",
+        "hint": "+15% talab"
+      }
+    },
+    "out": {
+      "capex": "Sarmoya (CapEx)",
+      "payback": "Pul to'liq qaytishi",
+      "monthly": "Oylik daromad · Faza 1",
+      "roi": "ROI · 4 yil",
+      "irr": "IRR · yillik",
+      "total": "4 yillik umumiy qaytim"
+    },
+    "monthUnit": "oy",
+    "legend": {
+      "p1": "Faza 1 · 70%",
+      "p2": "Faza 2 · 30%",
+      "payback": "Payback"
+    },
+    "chartX": [
+      "1-oy",
+      "24-oy",
+      "48-oy"
+    ],
+    "paybackMarker": "Payback · {m} oy",
+    "tableCols": [
+      "Stsenariy",
+      "Payback",
+      "Oylik · Faza 1",
+      "4 yillik umumiy",
+      "ROI · 4 yil",
+      "IRR"
+    ],
+    "fxSteps": [
+      "USD kiritiladi",
+      "UZS'ga qulflanadi (1-kun kursi)",
+      "Hammasi UZS'da"
+    ],
+    "note": "Raqamlar qulaylik uchun USD'da ko'rsatilgan (kurs 12,000). UZS asosidagi investor uchun valyuta xavfi yo'q. Asos: hozirgi pilotning haqiqiy run-rate'i, o'sish hisobga olinmagan (flat) — konservativ.",
+    "noteWarn": "Daromad kafolatlanmagan va haqiqiy sof foydaga bog'liq."
+  },
+  "funds": {
+    "eyebrow": "Mablag' qayerga ketadi",
+    "title": "Har bir dollar — jismoniy aktivga.",
+    "subtitle": "Sarmoya 100% jihozga ketadi — hammasi sizning nomingizda, IoT bilan kuzatiladi (to'liq raund = 30 klaster):",
+    "cols": [
+      "Aktiv",
+      "Miqdor × narx",
+      "Qiymat",
+      "Ulush"
+    ],
+    "rows": [
+      {
+        "asset": "E-bike'lar",
+        "qty": "420 × $410",
+        "value": "$172,200",
+        "share": "39%"
+      },
+      {
+        "asset": "Batareyalar",
+        "qty": "630 × $270",
+        "value": "$170,100",
+        "share": "39%"
+      },
+      {
+        "asset": "Kabinetlar",
+        "qty": "30 × $3,300",
+        "value": "$99,000",
+        "share": "22%"
+      }
+    ],
+    "totalLabel": "Jami CapEx",
+    "total": "$441,300",
+    "alloc": [
+      {
+        "label": "E-bike",
+        "share": "39%"
+      },
+      {
+        "label": "Batareya",
+        "share": "39%"
+      },
+      {
+        "label": "Kabinet",
+        "share": "22%"
+      }
+    ],
+    "note": "Operatsion xarajatlar (texxizmat, marketing, ijara) — Wolter zimmasida, sarmoyadan emas, daromaddan qoplanadi."
+  },
+  "report": {
+    "eyebrow": "Shaffoflik",
+    "title": "Har oy nima olasiz.",
+    "subtitle": "Double-entry, append-only ledger asosida oylik hisobot — namuna format (1 klaster, Standart):",
+    "head": "Oylik hisobot · namuna",
+    "tag": "1 klaster · UZS",
+    "rows": [
+      {
+        "label": "Yalpi daromad (swap + e-bike)",
+        "value": "26 983 248",
+        "kind": "normal"
+      },
+      {
+        "label": "Operatsion xarajatlar",
+        "value": "− 8 630 068",
+        "kind": "warn"
+      },
+      {
+        "label": "Sof foyda",
+        "value": "18 353 180",
+        "kind": "total"
+      },
+      {
+        "label": "Sizning ulushingiz (Faza 1 · 70%)",
+        "value": "12 847 226",
+        "kind": "hl"
+      },
+      {
+        "label": "Kümülyativ qaytim / payback holati",
+        "value": "≈ 70% · 10/14 oy",
+        "kind": "normal"
+      }
+    ],
+    "note": "Bu format namunasi — raqamlar har oy haqiqiy ledger'dan to'ldiriladi. Amortizatsiya AAOIFI bo'yicha aktiv egasi (siz) zimmasida, profit-share'dan chiqarilgan."
+  },
+  "roadmap": {
+    "eyebrow": "Ko'lam",
+    "title": "Toshkentdan boshlab — CIS'ga qadar.",
+    "items": [
+      {
+        "when": "Hozir",
+        "title": "Toshkent · Pilot",
+        "text": "20 kabinet, 709 foydalanuvchi — isbotlangan birlik iqtisodi.",
+        "hot": false
+      },
+      {
+        "when": "Bu raund",
+        "title": "Toshkent · Expansion",
+        "text": "+30 klaster — tarmoq zichligi va kabinet bandligi.",
+        "hot": true
+      },
+      {
+        "when": "Keyingi",
+        "title": "Butun O'zbekiston",
+        "text": "Ko'p shaharli, ko'p ijarachili BaaS platforma.",
+        "hot": false
+      },
+      {
+        "when": "Vizyon",
+        "title": "CIS bozorlari",
+        "text": "Mintaqaviy kengayish, korporativ fleet mijozlar.",
+        "hot": false
+      }
+    ]
+  },
+  "risks": {
+    "eyebrow": "Shaffoflik",
+    "title": "Har bir risk hisobga olingan.",
+    "subtitle": "Asset-backed ijara — risklar strukturaviy ravishda himoyalangan:",
+    "cards": [
+      {
+        "icon": "🛡️",
+        "title": "Aktiv sizning nomingizda",
+        "text": "Kompaniya yopilsa ham aktiv sizniki — boshqa operatorga berish mumkin.",
+        "warn": false
+      },
+      {
+        "icon": "🧱",
+        "title": "Ring-fenced loyiha",
+        "text": "Qaytim faqat shu aktiv to'plamining sof foydasidan.",
+        "warn": false
+      },
+      {
+        "icon": "📡",
+        "title": "IoT nazorat",
+        "text": "Har aktiv GPS + masofadan bloklash. To'lamasa — ishlamaydi.",
+        "warn": false
+      },
+      {
+        "icon": "✅",
+        "title": "Real tarmoq",
+        "text": "709 foydalanuvchi, jonli pilot — taxmin emas.",
+        "warn": false
+      },
+      {
+        "icon": "☪",
+        "title": "Islom moliyasi (Ijarah)",
+        "text": "Risk ulashish, ribadan xoli, asset-backed — Ijarah strukturasi.",
+        "warn": false
+      },
+      {
+        "icon": "⏳",
+        "title": "Likvidlik riski",
+        "text": "Bu investitsiya 48 oy davomida likvid emas — erta chiqish mexanizmi kafolatlanmagan.",
+        "warn": true
+      },
+      {
+        "icon": "💱",
+        "title": "Valyuta riski (USD)",
+        "text": "Kapital va qaytim UZS'ga qulflanadi; so'm kursi pasaysa USD qaytim kamayadi.",
+        "warn": true
+      },
+      {
+        "icon": "⚖️",
+        "title": "Regulyativ risk",
+        "text": "O'zbekistonda moliya qonunchiligi o'zgarishi strukturaga ta'sir qilishi mumkin.",
+        "warn": true
+      }
+    ],
+    "sensTitle": "Sezuvchanlik — sof foyda kamayganda investor oylik daromadi:",
+    "sens": [
+      {
+        "k": "−10%",
+        "mult": 0.9
+      },
+      {
+        "k": "−25%",
+        "mult": 0.75
+      },
+      {
+        "k": "−40%",
+        "mult": 0.6
+      }
+    ],
+    "sensNote": "1 klaster, Standart Faza-1 daromadiga nisbatan. Daromad kafolatlanmagan va haqiqiy sof foydaga bog'liq. To'liq risk registri (22 ta) — moliyaviy modelda va data room'da."
+  },
+  "faq": {
+    "eyebrow": "Savollar",
+    "title": "Tez-tez so'raladigan savollar.",
+    "items": [
+      {
+        "q": "Daromad kafolatlanganmi?",
+        "a": "Yo'q — bu profit-share. Qaytim haqiqiy sof foydaga bog'liq, shuning uchun stsenariylarni (Konservativ–Optimistik) ochiq ko'rsatamiz. Kafolatlangan foiz riba bo'lardi va Islom moliyasi tamoyillariga zid."
+      },
+      {
+        "q": "Aniq nimaga egalik qilaman?",
+        "a": "Jismoniy aktivlarga — kabinet, e-bike, batareya — sizning nomingizda. Bu asset-backed, equity emas."
+      },
+      {
+        "q": "Wolter yopilsa nima bo'ladi?",
+        "a": "Aktiv sizniki bo'lib qoladi. Har birida GPS + masofadan bloklash — boshqa operatorga o'tkazish yoki sotish mumkin."
+      },
+      {
+        "q": "Sof foyda qanday hisoblanadi?",
+        "a": "Daromad minus operatsion xarajatlar (swap 45.9%, e-bike xizmat + QQS 22%). Amortizatsiya — AAOIFI bo'yicha aktiv egasi (siz) zimmasida, profit-share'dan chiqarilgan."
+      },
+      {
+        "q": "Minimal summa va qanday to'lanadi?",
+        "a": "$14,710 dan (1 klaster). Oylik so'mda: payback'gacha 70%, keyin 48-oygacha 30%."
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "Jamoa",
+    "title": "Tajribali jamoa va maslahatchilar.",
+    "members": [
+      {
+        "id": "nabiev",
+        "name": "Akmaljon Nabiev",
+        "role": "CEO · Hammuassis",
+        "adv": false,
+        "desc": "Strategiya va kapital taqsimoti; Rent Market'ni qurgan va boshqaradi.",
+        "logosAlt": "PDP EcoSystem · Rent Market"
+      },
+      {
+        "id": "zokhid",
+        "name": "Ayubxon Zohidullaev",
+        "role": "COO · Hammuassis",
+        "adv": false,
+        "desc": "Rollout, uptime va servis operatsiyalari; ishonchli tarmoq amaliyoti.",
+        "logosAlt": "Rent Market"
+      },
+      {
+        "id": "paiziev",
+        "name": "Akmal Paiziev",
+        "role": "Angel investor · Maslahatchi",
+        "adv": true,
+        "desc": "O'sish · Hamkorlik · Masshtab.",
+        "logosAlt": "Stanford · Express24 · myTaxi"
+      },
+      {
+        "id": "tadjiev",
+        "name": "Shukurullo Tadjiev",
+        "role": "Angel investor · Maslahatchi",
+        "adv": true,
+        "desc": "Moliya · Intizom · Risk.",
+        "logosAlt": "InfinBank · Ipak Yuli · Car24"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Keyingi qadam",
+    "title": "Hujjatlar to'plamini oling.",
+    "subtitle": "Batafsil moliyaviy model, pitch deck va shartnoma shablonlarini yuboramiz.",
+    "steps": [
+      "Tanishuv",
+      "Prezentatsiya",
+      "Moliyaviy model",
+      "Shartnomalar",
+      "Imzolash"
+    ],
+    "form": {
+      "name": "Ism",
+      "namePh": "Ismingiz",
+      "contact": "Email yoki Telegram",
+      "contactPh": "@username yoki email",
+      "range": "Investitsiya hajmi",
+      "ranges": [
+        "$15k gacha",
+        "$15k – 50k",
+        "$50k – 150k",
+        "$150k+"
+      ],
+      "msg": "Xabar (ixtiyoriy)",
+      "msgPh": "Savol yoki izoh...",
+      "consent": "Men GETNOW MCHJ (Wolter) bilan investitsiya bo'yicha bog'lanishga roziman. Ma'lumotlarim Telegram orqali yuborilishini va GETNOW MCHJ serverida saqlanmasligini tushunaman.",
+      "send": "So'rov yuborish",
+      "errName": "Ismingizni kiriting",
+      "errContact": "Email yoki Telegram kiriting",
+      "errConsent": "Davom etish uchun rozilik kerak",
+      "directPre": "yoki to'g'ridan:",
+      "privacy": "Ushbu forma ism, email yoki Telegram, investitsiya hajmi va ixtiyoriy xabarni yig'adi. «Yuborish» bosilganda ma'lumot Telegram ilovasiga o'tkaziladi va bevosita @nabievuz bilan bog'lash uchun ishlatiladi. GETNOW MCHJ serverida saqlanmaydi.",
+      "tgMessage": "Assalomu alaykum! Wolter Invest bo'yicha qiziqaman.\nIsm: {name}\nAloqa: {contact}\nInvestitsiya hajmi: {range}",
+      "tgMessageMsg": "\nXabar: {msg}",
+      "toast": "Rahmat! Telegram oynasi tayyor xabar bilan ochildi."
+    },
+    "askRoundLabel": "To'liq raund",
+    "askRoundVal": "$441,300",
+    "askRoundSub": "30 klaster · to'liq expansion",
+    "askMinLabel": "Minimal kirish",
+    "askMinVal": "$14,710",
+    "askMinSub": "1 klaster · kirish nuqtasi",
+    "dataroomTitle": "Data room tarkibi",
+    "dataroom": [
+      "Moliyaviy model (Excel)",
+      "Pitch deck",
+      "Ijara + iqtino shartnoma shabloni",
+      "Pilot P&L va unit-economics",
+      "Ledger / hisob-kitob dizayni",
+      "Hardware va aktiv spetsifikatsiyalari",
+      "Risk register (22 ta)"
+    ],
+    "dataroomSoon": [
+      "Qimmatli qog'ozlar bo'yicha yuridik xulosa — DD paytida"
+    ]
+  },
+  "footer": {
+    "about": "Toshkentdagi batareya almashtirish (BaaS) va e-bike ijara tarmog'i. Kuryerlar uchun uzluksiz quvvat.",
+    "location": "Joylashuv: Toshkent, O'zbekiston",
+    "contactTitle": "Bog'lanish",
+    "contactDocs": "Hujjatlar to'plamini olish",
+    "sectionsTitle": "Bo'limlar",
+    "links": {
+      "how": "Qanday ishlaydi",
+      "structure": "Investitsiya strukturasi",
+      "calc": "Daromad kalkulyatori",
+      "risks": "Risklar"
+    },
+    "legal": "Wolter Invest · Yuridik shaxs: GETNOW MCHJ. © 2026 Wolter (GETNOW MCHJ). Illustrativ proyeksiya — joriy pilot run-rate'iga asoslangan. Profit-share strukturasi: qaytim haqiqiy sof foydaga bog'liq, kafolatlanmagan va sobit emas. Investitsiya asset-backed (jismoniy aktivlar bilan ta'minlangan), equity emas. Ushbu sahifa qimmatli qog'ozlarning ommaviy taklifi emas. Yuridik ko'rib chiqish jarayonda."
+  }
+}
