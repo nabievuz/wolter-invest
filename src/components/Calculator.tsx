@@ -40,8 +40,8 @@ function Chart({ sim, marker }: { sim: SimResult; marker: (m: number) => string 
     <svg id="chart" viewBox="0 0 720 250" preserveAspectRatio="none" aria-label="Cumulative return chart">
       <defs>
         <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#C6F23D" stopOpacity=".42" />
-          <stop offset="1" stopColor="#C6F23D" stopOpacity="0" />
+          <stop offset="0" stopColor="#D4FF00" stopOpacity=".42" />
+          <stop offset="1" stopColor="#D4FF00" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor="#37E0A0" stopOpacity=".34" />
@@ -55,7 +55,7 @@ function Chart({ sim, marker }: { sim: SimResult; marker: (m: number) => string 
       {area2 && <path d={area2} fill="url(#g2)" />}
       <path d={area1} fill="url(#g1)" />
       {line2 && <path d={line2} fill="none" stroke="#37E0A0" strokeWidth="2.4" strokeLinejoin="round" />}
-      <path d={line1} fill="none" stroke="#C6F23D" strokeWidth="2.6" strokeLinejoin="round" />
+      <path d={line1} fill="none" stroke="#D4FF00" strokeWidth="2.6" strokeLinejoin="round" />
       <line x1={xPb} y1={padT} x2={xPb} y2={H - padB} stroke="#F4B560" strokeWidth="1.6" strokeDasharray="3 4" />
       <circle cx={xPb} cy={Y(rows[pb - 1].cumUsd)} r="4.5" fill="#F4B560" />
       <text x={xPb + (pb > 40 ? -6 : 6)} y={padT + 12} fill="#F4B560" fontSize="11.5" fontFamily="Inter" textAnchor={pb > 40 ? 'end' : 'start'}>

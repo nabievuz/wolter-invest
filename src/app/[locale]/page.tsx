@@ -72,7 +72,7 @@ export default function Page({ params: { locale } }: { params: { locale: string 
           <div className="hero-art reveal in">
             <div className="glow" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/hero-ebike.png" alt="Wolter e-bike + swap cabinet" />
+            <img src="/img/wolter-e-bike-1.png" alt={t('hero.imgAlt')} width={1672} height={941} />
             <div className="float-pill fp1"><div><div className="pn">$14,710</div><div style={{ color: 'var(--muted)', fontSize: '11.5px' }}>{t('cta.askMinSub')}</div></div></div>
             <div className="float-pill fp2"><div><div className="pn">70 / 30</div><div style={{ color: 'var(--muted)', fontSize: '11.5px' }}>{t('hero.pillSplit')}</div></div></div>
           </div>
@@ -169,8 +169,8 @@ export default function Page({ params: { locale } }: { params: { locale: string 
               </div>
             ))}
           </div>
-          <div className="banner reveal" style={{ background: 'linear-gradient(100deg,rgba(55,224,160,.1),rgba(198,242,61,.05))' }}>
-            <div className="ic" style={{ background: 'linear-gradient(135deg,#37E0A0,#9ED11F)' }}><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5v14" stroke="#0A0C0B" strokeWidth="2.4" strokeLinecap="round" /></svg></div>
+          <div className="banner reveal" style={{ background: 'linear-gradient(100deg,rgba(55,224,160,.1),rgba(212,255,0,.05))' }}>
+            <div className="ic" style={{ background: 'linear-gradient(135deg,#37E0A0,#A9D900)' }}><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5v14" stroke="#0A0C0B" strokeWidth="2.4" strokeLinecap="round" /></svg></div>
             <p>{t('how.ratioPre')} <b style={{ color: 'var(--mint)' }}>{t('how.ratioStrong')}</b> {t('how.ratioPost')}</p>
           </div>
         </div>

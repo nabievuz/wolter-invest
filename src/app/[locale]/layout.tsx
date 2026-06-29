@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 import { routing, type Locale } from '@/i18n/routing';
 
 const FAVICON =
-  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A0C0B'/%3E%3Cpath d='M17.5 5 9 18h6l-1.5 9 8.5-13h-6z' fill='%23C6F23D'/%3E%3C/svg%3E";
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A0C0B'/%3E%3Cpath d='M17.5 5 9 18h6l-1.5 9 8.5-13h-6z' fill='%23D4FF00'/%3E%3C/svg%3E";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
