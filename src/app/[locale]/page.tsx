@@ -17,6 +17,21 @@ export default function Page({ params: { locale } }: { params: { locale: string 
   const t = useTranslations();
 
   const ticker = t.raw('ticker') as string[];
+  const heroMetrics = t.raw('hero.metrics') as { value: string; label: string }[];
+  const metricIcons = [
+    // clusters
+    <svg key="m0" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="7" height="7" rx="1.6" stroke="currentColor" strokeWidth="2" /><rect x="13.5" y="3.5" width="7" height="7" rx="1.6" stroke="currentColor" strokeWidth="2" /><rect x="3.5" y="13.5" width="7" height="7" rx="1.6" stroke="currentColor" strokeWidth="2" /><rect x="13.5" y="13.5" width="7" height="7" rx="1.6" stroke="currentColor" strokeWidth="2" /></svg>,
+    // compliant (shield-check)
+    <svg key="m1" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6l7-3z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /><path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>,
+    // riders (user)
+    <svg key="m2" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" stroke="currentColor" strokeWidth="2" /><path d="M5 20a7 7 0 0 1 14 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>,
+    // swap stations (swap arrows)
+    <svg key="m3" viewBox="0 0 24 24" fill="none"><path d="M4 9h13l-3-3M20 15H7l3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>,
+    // battery swaps (battery + bolt)
+    <svg key="m4" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="16" height="10" rx="2.5" stroke="currentColor" strokeWidth="2" /><path d="M21 10v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /><path d="M11.5 9l-2.6 4H11l-.5 3 3-4.5h-2.2l.2-2.5z" fill="currentColor" /></svg>,
+    // days of pilot data (calendar)
+    <svg key="m5" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5" width="17" height="16" rx="2.5" stroke="currentColor" strokeWidth="2" /><path d="M3.5 9.5h17M8 3v4M16 3v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>
+  ];
   const problemCards = t.raw('problem.cards') as Card[];
   const marketCards = t.raw('market.cards') as Card[];
   const products = t.raw('how.products') as { qty: string; name: string; desc: string }[];
@@ -50,31 +65,81 @@ export default function Page({ params: { locale } }: { params: { locale: string 
 
       {/* HERO */}
       <header className="hero">
+        <div className="hero-bg" aria-hidden="true" />
         <div className="wrap hero-grid">
-          <div className="reveal in">
+          {/* LEFT — copy */}
+          <div className="hero-copy reveal in">
             <span className="badge"><span className="dot" />{t('hero.badge')}</span>
-            <h1>
-              {t('hero.title1')} <span className="g">{t('hero.title2')}</span>
+            <h1 className="hero-title">
+              <span>{t('hero.title1')}</span>
+              <span>{t('hero.title2')}</span>
+              <span className="g">{t('hero.title3')}</span>
             </h1>
             <p className="lead">{t('hero.lead')}</p>
             <div className="chips">
-              <div className="chip"><div className="n"><CountUp end={14} /><small>{t('hero.chip1_unit')}</small></div><div className="l">{t('hero.chip1_label')}</div></div>
-              <div className="chip"><div className="n"><CountUp end={75} /><small>{t('hero.chip2_unit')}</small></div><div className="l">{t('hero.chip2_label')}</div></div>
-              <div className="chip"><div className="n"><CountUp end={709} /><small>{t('hero.chip3_unit')}</small></div><div className="l">{t('hero.chip3_label')}</div></div>
+              <div className="chip">
+                <span className="chip-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" /><path d="M12 7.5V12l3 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
+                <div className="n"><CountUp end={14} /><small>{t('hero.chip1_unit')}</small></div>
+                <div className="l">{t('hero.chip1_label')}</div>
+              </div>
+              <div className="chip">
+                <span className="chip-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /><path d="M17 5h4v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
+                <div className="n"><CountUp end={75} /><small>{t('hero.chip2_unit')}</small></div>
+                <div className="l">{t('hero.chip2_label')}</div>
+              </div>
+              <div className="chip">
+                <span className="chip-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3.2" stroke="currentColor" strokeWidth="2" /><path d="M3.5 19a5.5 5.5 0 0 1 11 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /><path d="M16 5.2a3.2 3.2 0 0 1 0 5.6M17.8 19a5.5 5.5 0 0 0-2.8-4.7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></span>
+                <div className="n"><CountUp end={709} /><small>{t('hero.chip3_unit')}</small></div>
+                <div className="l">{t('hero.chip3_label')}</div>
+              </div>
             </div>
             <div className="hero-cta">
-              <a href="#calc" className="btn btn-primary">{t('hero.cta1')} →</a>
+              <a href="#calc" className="btn btn-primary">{t('hero.cta1')} <span aria-hidden="true">→</span></a>
               <a href="#cta" className="btn btn-ghost">{t('hero.cta2')}</a>
             </div>
-            <div className="trust"><span className="av"><i /><i /><i /></span>{t('hero.trust')}</div>
             <p className="disc-mini">{t('hero.disclaimer')}</p>
           </div>
+
+          {/* RIGHT — product composition */}
           <div className="hero-art reveal in">
             <div className="glow" />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/wolter-e-bike-1.png" alt={t('hero.imgAlt')} width={1672} height={941} />
-            <div className="float-pill fp1"><div><div className="pn">$14,710</div><div style={{ color: 'var(--muted)', fontSize: '11.5px' }}>{t('cta.askMinSub')}</div></div></div>
-            <div className="float-pill fp2"><div><div className="pn">70 / 30</div><div style={{ color: 'var(--muted)', fontSize: '11.5px' }}>{t('hero.pillSplit')}</div></div></div>
+            <div className="hero-stage">
+              <div className="art-floor" aria-hidden="true" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img className="art-cabinet" src="/img/swap-cabinet.webp" alt={t('hero.imgAltCabinet')} width={1122} height={1402} loading="eager" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img className="art-bike" src="/img/e-bike.webp" alt={t('hero.imgAltBike')} width={1448} height={1086} loading="eager" fetchPriority="high" />
+            </div>
+            <div className="float-pill fp-cabinet">
+              <span className="fp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" /><path d="M14.6 9.2C14 8.4 13 8 12 8c-1.4 0-2.6.8-2.6 2s1.2 1.7 2.6 2 2.6.8 2.6 2-1.2 2-2.6 2c-1 0-2-.4-2.6-1.2M12 6.5v11" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" /></svg></span>
+              <div>
+                <div className="fp-lab">{t('hero.pillInvest')}</div>
+                <div className="pn">$14,710</div>
+                <div className="fp-sub">{t('cta.askMinSub')}</div>
+              </div>
+            </div>
+            <div className="float-pill fp-bike">
+              <span className="fp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 1 0 9 9h-9V3z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /><path d="M13.5 3.2A9 9 0 0 1 20.8 10.5H13.5V3.2z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /></svg></span>
+              <div>
+                <div className="pn">70 / 30</div>
+                <div className="fp-sub">{t('hero.pillSplit')}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* bottom metric strip */}
+        <div className="wrap">
+          <div className="hero-metrics reveal in">
+            {heroMetrics.map((m, i) => (
+              <div className="hm" key={i}>
+                <span className="hm-ic" aria-hidden="true">{metricIcons[i]}</span>
+                <div className="hm-t">
+                  <span className="hm-v">{m.value}</span>
+                  <span className="hm-l">{m.label}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </header>
@@ -138,13 +203,13 @@ export default function Page({ params: { locale } }: { params: { locale: string 
           </div>
           <div className="prod-cards reveal">
             {products.map((p, i) => {
-              const file = ['cabinet', 'bike', 'battery'][i];
+              const file = ['swap-cabinet', 'e-bike', 'battery'][i];
               return (
                 <div className="prod-card" key={i}>
                   <div className="prod-qty">{p.qty}</div>
                   <div className={'prod-img' + (i === 2 ? ' batt' : '')}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={`/img/${file}.png`} alt={p.name} loading="lazy" />
+                    <img src={`/img/${file}.webp`} alt={p.name} loading="lazy" />
                   </div>
                   <h3>{p.name}</h3>
                   <p>{p.desc}</p>

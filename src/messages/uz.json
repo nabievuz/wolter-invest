@@ -14,9 +14,10 @@
   },
   "hero": {
     "badge": "Islom moliyasi (Ijarah) · Asset-backed",
-    "title1": "Daromad keltiruvchi aktivlarga egalik qiling —",
-    "title2": "sof foydadan ulush oling.",
-    "lead": "Wolter — Toshkentdagi batareya almashtirish va e-bike tarmog'i. Siz aktivlarni moliyalashtirasiz va egalik qilasiz, biz boshqaramiz.",
+    "title1": "Mobillik aktivlariga egalik qiling.",
+    "title2": "Daromad yarating.",
+    "title3": "Kelajakka quvvat bering.",
+    "lead": "Wolter Toshkentda batareya almashtirish tarmog'i va e-bike'larni boshqaradi. Siz aktivlarni moliyalashtirasiz va egalik qilasiz — biz boshqaramiz va foydani bo'lishamiz.",
     "chip1_unit": "oy",
     "chip1_label": "Pul to'liq qaytishi (payback)",
     "chip2_unit": "%",
@@ -24,11 +25,19 @@
     "chip3_unit": "+",
     "chip3_label": "Jonli pilot foydalanuvchi",
     "cta1": "Daromadni hisoblang",
-    "cta2": "Hujjatlar to'plami",
-    "trust": "709+ foydalanuvchi · jonli pilot · Stanford & InfinBank maslahatchilari",
-    "disclaimer": "Raqamlar — joriy pilot run-rate'iga asoslangan illustrativ proyeksiya. Daromad haqiqiy sof foydaga bog'liq va kafolatlanmagan.",
+    "cta2": "Hujjatlar to'plami",    "disclaimer": "Raqamlar — joriy pilot run-rate'iga asoslangan illustrativ proyeksiya. Daromad haqiqiy sof foydaga bog'liq va kafolatlanmagan.",
+    "pillInvest": "Investitsiya",
     "pillSplit": "foyda taqsimoti",
-    "imgAlt": "Wolter batareya almashtirish kabineti va e-bike"
+    "imgAltCabinet": "Wolter batareya almashtirish kabineti",
+    "imgAltBike": "Wolter yetkazib berish e-bike",
+    "metrics": [
+      { "value": "30", "label": "Klaster mavjud" },
+      { "value": "Islom moliyasi", "label": "Mos struktura" },
+      { "value": "709+", "label": "Faol haydovchi" },
+      { "value": "20", "label": "Almashtirish st." },
+      { "value": "7,440+", "label": "Batareya almashtirish" },
+      { "value": "48", "label": "Kun pilot ma'lumoti" }
+    ]
   },
   "ticker": [
     "709+ faol haydovchi",

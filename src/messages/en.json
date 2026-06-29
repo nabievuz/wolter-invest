@@ -14,21 +14,30 @@
   },
   "hero": {
     "badge": "Islamic finance (Ijarah) · Asset-backed",
-    "title1": "Own revenue-generating assets —",
-    "title2": "earn a share of net profit.",
-    "lead": "Wolter is a battery-swap and e-bike network in Tashkent. You finance and own the assets; we operate them.",
+    "title1": "Own mobility assets.",
+    "title2": "Generate revenue.",
+    "title3": "Power the future.",
+    "lead": "Wolter operates a battery-swap network and e-bikes in Tashkent. You finance and own the assets; we operate and share the profit.",
     "chip1_unit": "mo",
     "chip1_label": "Payback period",
     "chip2_unit": "%",
     "chip2_label": "Projected IRR · annual",
     "chip3_unit": "+",
-    "chip3_label": "Live-pilot users",
+    "chip3_label": "Live · pilot users",
     "cta1": "Calculate returns",
-    "cta2": "Request data room",
-    "trust": "709+ users · live pilot · Stanford & InfinBank advisors",
-    "disclaimer": "These figures are illustrative projections based on current pilot run-rate. Returns depend on actual net profit and are not guaranteed.",
+    "cta2": "Request data room",    "disclaimer": "These figures are illustrative projections based on current pilot run-rate. Returns depend on actual net profit and are not guaranteed.",
+    "pillInvest": "Invest from",
     "pillSplit": "profit split",
-    "imgAlt": "Wolter battery-swap cabinet and e-bike"
+    "imgAltCabinet": "Wolter battery-swap cabinet",
+    "imgAltBike": "Wolter delivery e-bike",
+    "metrics": [
+      { "value": "30", "label": "Clusters available" },
+      { "value": "Islamic-finance", "label": "Compliant structure" },
+      { "value": "709+", "label": "Active riders" },
+      { "value": "20", "label": "Swap stations" },
+      { "value": "7,440+", "label": "Battery swaps" },
+      { "value": "48", "label": "Days of pilot data" }
+    ]
   },
   "ticker": [
     "709+ Active Riders",
