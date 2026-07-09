@@ -13,31 +13,56 @@
     "cta": "Hujjatlar to'plami"
   },
   "hero": {
-    "badge": "Islom moliyasi (Ijarah) · Asset-backed",
-    "title1": "Mobillik aktivlariga egalik qiling.",
-    "title2": "Daromad yarating.",
-    "title3": "Kelajakka quvvat bering.",
-    "lead": "Wolter Toshkentda batareya almashtirish tarmog'i va e-bike'larni boshqaradi. Siz aktivlarni moliyalashtirasiz va egalik qilasiz — biz boshqaramiz va foydani bo'lishamiz.",
-    "chip1_unit": "oy",
-    "chip1_label": "Pul to'liq qaytishi (payback)",
-    "chip2_unit": "%",
-    "chip2_label": "Prognozli IRR · yillik",
-    "chip3_unit": "+",
-    "chip3_label": "Jonli pilot foydalanuvchi",
-    "cta1": "Daromadni hisoblang",
-    "cta2": "Hujjatlar to'plami",    "disclaimer": "Raqamlar — joriy pilot run-rate'iga asoslangan illustrativ proyeksiya. Daromad haqiqiy sof foydaga bog'liq va kafolatlanmagan.",
-    "pillInvest": "Investitsiya",
-    "pillSplit": "foyda taqsimoti",
+    "badge": "Jonli pilot · 709+ haydovchi hozir yo'lda",
+    "title1": "{capex} — bitta klaster.",
+    "title2": "{monthly} — har oy sizga.",
+    "title3": "{payback} oyda to'liq qaytadi.",
+    "lead": "Siz Toshkentdagi batareya-almashtirish klasteriga egalik qilasiz — kabinet, 14 ta e-bike, 21 ta batareya. Wolter uni har kuni ishlatadi, foyda har oy bo'linadi. Aktiv qancha ko'p ishlasa — ikkala tomon ham shuncha ko'p oladi.",
+    "flow": [
+      {
+        "value": "$14,710",
+        "label": "Siz investitsiya qilasiz"
+      },
+      {
+        "value": "1 klaster",
+        "label": "Aktiv sizning nomingizda"
+      },
+      {
+        "value": "709+ haydovchi",
+        "label": "Wolter ishlatadi"
+      },
+      {
+        "value": "70% sizga",
+        "label": "Foyda har oy bo'linadi"
+      }
+    ],
+    "cta1": "Daromadingizni hisoblang",
+    "cta2": "Hujjatlar to'plami",
+    "disclaimer": "Raqamlar — joriy pilot run-rate'iga asoslangan illustrativ proyeksiya. Daromad haqiqiy sof foydaga bog'liq va kafolatlanmagan.",
+    "pillInLabel": "Siz kiritasiz",
+    "pillInSub": "bitta klaster narxi",
+    "pillOutLabel": "Sizga qaytadi",
+    "pillOutSub": "70% ulush · paybackgacha",
+    "pillOutUnit": "oy",
+    "winwin": {
+      "youTitle": "Siz yutasiz",
+      "you": [
+        "Aktiv rasman sizniki — qog'ozda emas, temirda",
+        "Paybackgacha sof foydaning 70% sizga",
+        "~75% prognozli IRR · har oy hisobot va to'lov"
+      ],
+      "wolterTitle": "Wolter yutadi",
+      "wolter": [
+        "Tarmoq kapital xarajatsiz kengayadi",
+        "Paybackdan so'ng operator ulushi oshadi",
+        "Har yangi klaster tarmoq effektini kuchaytiradi"
+      ],
+      "tag": "WIN-WIN",
+      "totalLabel": "48 oyda jami qaytim",
+      "caption": "Manfaatlar bir chiziqda: aktiv to'xtamasdan ishlashi — ikkala tomonning ham asosiy maqsadi. Siz ko'proq olsangiz, Wolter ham ko'proq oladi."
+    },
     "imgAltCabinet": "Wolter batareya almashtirish kabineti",
-    "imgAltBike": "Wolter yetkazib berish e-bike",
-    "metrics": [
-      { "value": "30", "label": "Klaster mavjud" },
-      { "value": "Islom moliyasi", "label": "Mos struktura" },
-      { "value": "709+", "label": "Faol haydovchi" },
-      { "value": "20", "label": "Almashtirish st." },
-      { "value": "7,440+", "label": "Batareya almashtirish" },
-      { "value": "48", "label": "Kun pilot ma'lumoti" }
-    ]
+    "imgAltBike": "Wolter yetkazib berish e-bike"
   },
   "ticker": [
     "709+ faol haydovchi",

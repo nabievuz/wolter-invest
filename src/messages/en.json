@@ -13,31 +13,56 @@
     "cta": "Request data room"
   },
   "hero": {
-    "badge": "Islamic finance (Ijarah) · Asset-backed",
-    "title1": "Own mobility assets.",
-    "title2": "Generate revenue.",
-    "title3": "Power the future.",
-    "lead": "Wolter operates a battery-swap network and e-bikes in Tashkent. You finance and own the assets; we operate and share the profit.",
-    "chip1_unit": "mo",
-    "chip1_label": "Payback period",
-    "chip2_unit": "%",
-    "chip2_label": "Projected IRR · annual",
-    "chip3_unit": "+",
-    "chip3_label": "Live · pilot users",
-    "cta1": "Calculate returns",
-    "cta2": "Request data room",    "disclaimer": "These figures are illustrative projections based on current pilot run-rate. Returns depend on actual net profit and are not guaranteed.",
-    "pillInvest": "Invest from",
-    "pillSplit": "profit split",
+    "badge": "Live pilot · 709+ riders on the road right now",
+    "title1": "{capex} — one cluster.",
+    "title2": "{monthly}/month — yours.",
+    "title3": "Payback in {payback} months.",
+    "lead": "You own a battery-swap cluster in Tashkent — a cabinet, 14 e-bikes, 21 batteries. Wolter runs it every day and the profit is split monthly. The harder the asset works, the more both sides earn.",
+    "flow": [
+      {
+        "value": "$14,710",
+        "label": "You invest"
+      },
+      {
+        "value": "1 cluster",
+        "label": "Asset in your name"
+      },
+      {
+        "value": "709+ riders",
+        "label": "Wolter operates"
+      },
+      {
+        "value": "70% to you",
+        "label": "Profit split monthly"
+      }
+    ],
+    "cta1": "Calculate your returns",
+    "cta2": "Request data room",
+    "disclaimer": "These figures are illustrative projections based on current pilot run-rate. Returns depend on actual net profit and are not guaranteed.",
+    "pillInLabel": "You put in",
+    "pillInSub": "one cluster price",
+    "pillOutLabel": "You get back",
+    "pillOutSub": "70% share · until payback",
+    "pillOutUnit": "mo",
+    "winwin": {
+      "youTitle": "You win",
+      "you": [
+        "The asset is legally yours — steel, not paper",
+        "70% of net profit until full payback",
+        "~75% projected IRR · monthly report & payout"
+      ],
+      "wolterTitle": "Wolter wins",
+      "wolter": [
+        "The network scales with zero capex",
+        "Operator share grows after payback",
+        "Every new cluster strengthens the network effect"
+      ],
+      "tag": "WIN-WIN",
+      "totalLabel": "Total over 48 months",
+      "caption": "Aligned incentives: keeping the asset running non-stop is the core goal of both sides. The more you earn, the more Wolter earns."
+    },
     "imgAltCabinet": "Wolter battery-swap cabinet",
-    "imgAltBike": "Wolter delivery e-bike",
-    "metrics": [
-      { "value": "30", "label": "Clusters available" },
-      { "value": "Islamic-finance", "label": "Compliant structure" },
-      { "value": "709+", "label": "Active riders" },
-      { "value": "20", "label": "Swap stations" },
-      { "value": "7,440+", "label": "Battery swaps" },
-      { "value": "48", "label": "Days of pilot data" }
-    ]
+    "imgAltBike": "Wolter delivery e-bike"
   },
   "ticker": [
     "709+ Active Riders",
