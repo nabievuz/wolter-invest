@@ -34,7 +34,7 @@ Company-reported pilot figures are dated and distinguished from model outputs. A
 
 The calculation normalizes swap data over 48 days and rental data over 18 days, holds profit constant, and scales clusters linearly. It omits additional replacement/repair costs, investor-specific taxes, payment delays and exchange-rate changes. The scenario multipliers have no assigned probabilities.
 
-The pilot evidence and team roles are company-reported, not independent verification. References to Ijarah describe the proposed structure, not certification. Before publication, obtain current pilot records, financial reconciliations, contracts, title/asset records and legal/Sharia review as applicable. Confirm the existing Telegram and telephone contact details.
+The pilot evidence and team roles are company-reported, not independent verification. The owner confirms that the Ijarah structure is established and its legal opinion is ready; no independent Sharia certification is claimed. Before publication, obtain current pilot records, financial reconciliations, contracts, title/asset records and legal/Sharia review as applicable. Confirm the existing Telegram and telephone contact details.
 
 ## Main files
 
@@ -59,3 +59,7 @@ The owner corrected the pilot period to May 2026 and supplied an admin-panel scr
 ## Brand voice
 
 Public copy speaks as Wolter: we run the network, our results show the business, and you are the prospective partner. Use direct, concise first-person language in all three locales. Explain assumptions and contract limits in the same company voice. Keep financial figures, source qualifications and guarantees accurate; do not add unsupported promises or describe the site as an external reviewer. Visitor consent and the prepared Telegram message retain the visitor’s own voice.
+
+## Partnership terms
+
+On 13 September 2026 the owner confirmed that the lease structure and legal opinion are settled, $250,000 has been raised under this structure, and equipment ownership and operator obligations are fully specified in the agreement. The terms section presents these company statements and equipment oversight responsibilities. It does not claim independent legal verification, guaranteed uptime or guaranteed investment returns. The raised amount is not used as revenue or as an input to projected returns.

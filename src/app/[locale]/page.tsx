@@ -37,6 +37,8 @@ export default function Page({
   const team = useTranslations("team");
   const calc = useTranslations("calc");
   const sim = simulate(1, "BASE");
+  // Capital raised under this structure, confirmed by the owner on 2026-09-13.
+  const capitalRaisedUsd = 250000;
   const products = [
     {
       name: "cabinet",
@@ -359,16 +361,22 @@ export default function Page({
               <p className="eyebrow">{t("risksEyebrow")}</p>
               <h2>{t("risksTitle")}</h2>
               <p>{t("risksDesc")}</p>
+              <div className="partnership-proof">
+                <span>{t("raisedLabel")}</span>
+                <strong>{usd(capitalRaisedUsd)}</strong>
+                <p>{t("raisedText")}</p>
+                <small>{t("raisedDate")}</small>
+              </div>
               <a className="text-link" href="#cta">
-                {t("navCta")}
+                {t("termsCta")}
                 <Arrow />
               </a>
             </div>
             <div className="risk-list">
-              {[1, 2, 3, 4].map((n) => (
-                <details key={n} open={n === 1}>
+              {[4, 3, 1, 2].map((n, index) => (
+                <details key={n} open={n === 4 || n === 3}>
                   <summary>
-                    <span className="risk-number">0{n}</span>
+                    <span className="risk-number">0{index + 1}</span>
                     <span>{t(`risk${n}Title`)}</span>
                     <span className="details-icon" aria-hidden="true">
                       +
@@ -376,14 +384,12 @@ export default function Page({
                   </summary>
                   <div className="risk-body">
                     <p>{t(`risk${n}Text`)}</p>
+                    {n === 3 && (
+                      <p className="equipment-care-note">{t("risk3Care")}</p>
+                    )}
                     {n === 4 && (
-                      <a
-                        className="text-link"
-                        href="https://aaoifi.com/ss-9-ijarah-and-ijarah-muntahia-bittamleek/?lang=en"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        AAOIFI 9 ↗
+                      <a className="text-link" href="#cta">
+                        {t("legalCta")}
                       </a>
                     )}
                   </div>
