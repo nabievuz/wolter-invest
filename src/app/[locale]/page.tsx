@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import Nav from "@/components/Nav";
 import Calculator from "@/components/Calculator";
 import LeadForm from "@/components/LeadForm";
+import RevenueEvidence from "@/components/RevenueEvidence";
 import { Wordmark } from "@/components/Brand";
 import { CLUSTER_CAPEX, MODEL, simulate, usd } from "@/lib/model";
 
@@ -288,24 +289,33 @@ export default function Page({
               </div>
               <p>{t("evidenceDesc")}</p>
             </div>
-            <p className="pilot-label">
-              <span className="status-dot" />
-              {t("pilotLabel")}
-            </p>
-            <div className="pilot-stats">
-              {[
-                ["709", "users"],
-                ["200", "bikes"],
-                ["20", "cabinets"],
-                ["7,440", "swaps"],
-              ].map(([value, label]) => (
-                <div key={label}>
-                  <strong>{value}</strong>
-                  <span>{t(label)}</span>
-                </div>
-              ))}
-            </div>
-            <p className="section-note">{t("pilotNote")}</p>
+            <RevenueEvidence locale={locale} />
+            <details className="historical-pilot">
+              <summary>
+                {t("pilotLabel")}
+                <span className="details-icon" aria-hidden="true">
+                  +
+                </span>
+              </summary>
+              <p className="pilot-label">
+                <span className="status-dot" />
+                {t("pilotLabel")}
+              </p>
+              <div className="pilot-stats">
+                {[
+                  ["709", "users"],
+                  ["200", "bikes"],
+                  ["20", "cabinets"],
+                  ["7,440", "swaps"],
+                ].map(([value, label]) => (
+                  <div key={label}>
+                    <strong>{value}</strong>
+                    <span>{t(label)}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="section-note">{t("pilotNote")}</p>
+            </details>
             <details className="model-source" id="model">
               <summary>
                 <span>{t("modelTitle")}</span>

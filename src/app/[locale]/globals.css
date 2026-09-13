@@ -1026,6 +1026,295 @@ summary {
 summary::-webkit-details-marker {
   display: none;
 }
+/* Company-reported monthly revenue */
+.revenue-evidence {
+  margin-bottom: 32px;
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+}
+.revenue-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.revenue-heading .eyebrow {
+  font-size: 9px;
+  margin-bottom: 12px;
+  color: var(--muted);
+}
+.revenue-heading h3 {
+  font-size: 28px;
+  letter-spacing: -0.045em;
+}
+.revenue-period {
+  font-size: 11px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  white-space: nowrap;
+}
+.revenue-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  padding: 28px 0;
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.revenue-metrics > div {
+  min-width: 0;
+}
+.revenue-metrics span {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+}
+.revenue-metrics strong {
+  display: block;
+  font-family: var(--font-display), var(--font);
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1.2;
+  margin: 10px 0 6px;
+}
+.revenue-metrics small {
+  font-size: 19px;
+  letter-spacing: 0;
+}
+.revenue-metrics p {
+  font-size: 10px;
+  color: var(--muted);
+}
+.revenue-metrics .revenue-decline {
+  color: #8f503c;
+}
+.revenue-chart {
+  margin: 28px 0 0;
+}
+.revenue-chart figcaption {
+  font-size: 13px;
+  font-weight: 600;
+}
+.revenue-chart figcaption span {
+  color: var(--muted);
+  font-weight: 400;
+}
+.revenue-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 14px 0 32px;
+  font-size: 10px;
+  color: var(--muted);
+}
+.revenue-legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.revenue-legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+.revenue-bike-key,
+.revenue-bike {
+  background: #526740;
+}
+.revenue-swap-key,
+.revenue-swap {
+  background: #d4ed9a;
+}
+.revenue-plot {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 34px;
+}
+.revenue-axis {
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--muted);
+  width: 28px;
+  flex-shrink: 0;
+  text-align: right;
+}
+.revenue-bars {
+  height: 240px;
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  border-bottom: 1px solid var(--line);
+  background: repeating-linear-gradient(
+    to top,
+    transparent 0,
+    transparent calc(33.333% - 1px),
+    #e9ece3 calc(33.333% - 1px),
+    #e9ece3 33.333%
+  );
+}
+.revenue-column {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.revenue-stack {
+  width: 70%;
+  max-width: 150px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.revenue-stack > strong {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 7px;
+  font-size: 13px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.revenue-stack > div {
+  flex-basis: 0;
+}
+.revenue-stack > .revenue-swap {
+  border-radius: 5px 5px 0 0;
+}
+.revenue-month {
+  position: absolute;
+  top: 100%;
+  padding-top: 12px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.revenue-total {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+.revenue-total strong {
+  font-size: 16px;
+}
+.revenue-details {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.revenue-details summary,
+.historical-pilot > summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  padding: 18px 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+.revenue-table-scroll {
+  overflow-x: auto;
+}
+.revenue-table-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  white-space: nowrap;
+  text-align: right;
+}
+.revenue-table-scroll caption {
+  white-space: normal;
+  text-align: left;
+  padding: 0 0 16px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+.revenue-table-scroll th,
+.revenue-table-scroll td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--line);
+}
+.revenue-table-scroll th:first-child {
+  text-align: left;
+}
+.revenue-table-scroll thead {
+  background: #f2f4ed;
+}
+.revenue-source {
+  margin-top: 16px;
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.historical-pilot {
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 24px;
+}
+.historical-pilot > .section-note {
+  padding-bottom: 24px;
+}
+@media (max-width: 640px) {
+  .revenue-evidence {
+    padding: 22px 16px;
+  }
+  .revenue-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .revenue-heading h3 {
+    font-size: 24px;
+  }
+  .revenue-metrics {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 14px;
+  }
+  .revenue-metrics > div:first-child {
+    grid-column: 1/-1;
+  }
+  .revenue-metrics strong {
+    font-size: 32px;
+  }
+  .revenue-metrics > div:first-child strong {
+    font-size: 42px;
+  }
+  .revenue-legend {
+    gap: 10px;
+  }
+  .revenue-bars {
+    gap: 8px;
+  }
+  .revenue-stack {
+    width: 80%;
+  }
+  .revenue-stack > strong {
+    font-size: 11px;
+  }
+  .revenue-month {
+    font-size: 10px;
+  }
+  .revenue-plot {
+    gap: 8px;
+  }
+  .revenue-total {
+    flex-direction: column;
+  }
+}
 /* Profit split */
 .phase-grid {
   display: grid;

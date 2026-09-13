@@ -58,7 +58,7 @@
     "sharedNote": "Operatsion xarajatlar tushumdan qoplanadi va sizning ulushingizga ta’sir qiladi. Aktiv eskirishi, katta ta’mir va sug‘urta majburiyatlarini hujjatlarda tekshiring.",
     "evidenceEyebrow": "04 / RAQAMLAR ORTIDAGI ASOS",
     "evidenceTitle": "Ko‘ring. Solishtiring.\nKeyin qaror qiling.",
-    "evidenceDesc": "Pilot ko‘rsatkichlari, model hisoblari va hujjatlarni alohida ko‘rsatamiz — har bir raqamning maqomi tushunarli bo‘lishi uchun.",
+    "evidenceDesc": "2026-yildagi oylik tushumlar, 2025-yil piloti va investor modeli — har bir raqamning davri va hisoblash asosi ko‘rsatilgan.",
     "pilotLabel": "KOMPANIYA E’LON QILGAN PILOT · 2025",
     "users": "ro‘yxatdan o‘tgan foydalanuvchi",
     "bikes": "e-bike",
@@ -189,7 +189,12 @@
       "contact": "Email yoki Telegram",
       "contactPh": "@username yoki email",
       "range": "Investitsiya hajmi",
-      "ranges": ["$15k gacha", "$15k – 50k", "$50k – 150k", "$150k+"],
+      "ranges": [
+        "$15k gacha",
+        "$15k – 50k",
+        "$50k – 150k",
+        "$150k+"
+      ],
       "msg": "Xabar (ixtiyoriy)",
       "msgPh": "Savol yoki izoh...",
       "consent": "Men GETNOW MCHJ (Wolter) bilan investitsiya bo'yicha bog'lanishga roziman. Ma'lumotlarim Telegram orqali yuborilishini va GETNOW MCHJ serverida saqlanmasligini tushunaman.",
@@ -205,5 +210,34 @@
       "handoff": "Telegram ochilmasa, tayyor xabar havolasini bosing. So‘rov faqat Telegramda yuborganingizdan keyin yetib boradi.",
       "openDraft": "Tayyor xabarni ochish ↗"
     }
+  },
+  "revenue": {
+    "label": "KOMPANIYA TAQDIM ETGAN NATIJALAR",
+    "title": "Oylik tushum. Ikki manbadan.",
+    "period": "May — avgust 2026",
+    "latest": "Oxirgi oy tushumi",
+    "million": "mln",
+    "sinceMay": "Mayga nisbatan",
+    "growthNote": "May → avgust 2026",
+    "monthlyChange": "Oldingi oyga nisbatan",
+    "changeNote": "Iyul → avgust 2026",
+    "chartTitle": "Tushum dinamikasi",
+    "bikeRevenue": "E-bike ijarasi tushumi",
+    "swapRevenue": "SWAP tushumi",
+    "chartDescription": "Jami oylik tushum, mln UZS: may 238,5; iyun 371,9; iyul 404,6; avgust 382,4. Iyuldan avgustga tushum 5,5% kamaygan. Aniq raqamlar quyidagi jadvalda.",
+    "total": "To‘rt oyda jami tushum",
+    "tableTitle": "Aniq raqamlar va operatsiyalar",
+    "tableCaption": "2026-yil may–avgust. Barcha summalar UZSda. Ijara soni velosipedlar yoki noyob mijozlar sonini anglatmaydi.",
+    "month": "Oy",
+    "rentals": "Ijara soni",
+    "swaps": "SWAP soni",
+    "totalShort": "Jami",
+    "mom": "Oylik o‘zgarish",
+    "may": "May",
+    "june": "Iyun",
+    "july": "Iyul",
+    "august": "Avgust",
+    "source": "Manba: kompaniya taqdim etgan jadval, 13.09.2026. Pul birligi UZS, “E-bike rental” ijara soni ekani tasdiqlangan. Ma’lumotlar mustaqil auditdan o‘tgan deb taqdim etilmaydi.",
+    "limits": "Ko‘rsatilgan summalar tushumdir. Xarajatlar, soliqlar va taqsimlanadigan sof foyda ushbu jadvalda berilmagan. Shu sababli bu natijalar investor kalkulyatoridagi foyda hisobini yangilamaydi; kalkulyator avvalgi model farazlariga asoslanadi."
   }
 }

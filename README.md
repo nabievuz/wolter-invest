@@ -47,3 +47,9 @@ The pilot evidence and team roles are company-reported, not independent verifica
 - `__tests__/model.test.ts`: cash-flow, phase-transition and stress edge cases.
 
 The redesign uses clear information hierarchy, concrete assets, progressive disclosure and reversible exploration. No neurological measurement or conversion uplift is claimed.
+
+## Reported revenue, May–August 2026
+
+`src/lib/revenue.ts` transcribes the table supplied by the owner on 13 September 2026. The owner confirmed that monetary amounts are UZS and E-bike rental is a count of rental events. `RevenueEvidence` computes totals and month-over-month changes directly from those inputs. The chart uses a zero baseline and includes the August decline. Exact figures and operation counts remain accessible in the table.
+
+These reported revenue figures are separate from the older investment model. No net margin, updated asset base or subscription-only recurring revenue was supplied, so they are labeled monthly revenue and do not change projected investor distributions.

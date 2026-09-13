@@ -58,7 +58,7 @@
     "sharedNote": "Operating expenses are paid from revenue and affect your share. Check asset wear, major maintenance and insurance responsibilities in the documents.",
     "evidenceEyebrow": "04 / BEHIND THE NUMBERS",
     "evidenceTitle": "See the evidence.\nThen make your decision.",
-    "evidenceDesc": "Pilot figures, model calculations and documents are shown separately, so you can see what supports each number.",
+    "evidenceDesc": "Monthly revenue from 2026, the 2025 pilot and the investor model — each figure has its own period and calculation basis.",
     "pilotLabel": "COMPANY-REPORTED PILOT · 2025",
     "users": "registered users",
     "bikes": "e-bikes",
@@ -189,7 +189,12 @@
       "contact": "Email or Telegram",
       "contactPh": "@username or email",
       "range": "Investment range",
-      "ranges": ["Up to $15k", "$15k – 50k", "$50k – 150k", "$150k+"],
+      "ranges": [
+        "Up to $15k",
+        "$15k – 50k",
+        "$50k – 150k",
+        "$150k+"
+      ],
       "msg": "Message (optional)",
       "msgPh": "Question or note...",
       "consent": "I consent to being contacted by GETNOW LLC (Wolter) regarding this investment opportunity. I understand that my data is transmitted via Telegram and is not stored on GETNOW LLC servers.",
@@ -205,5 +210,34 @@
       "handoff": "If Telegram does not open, use the prepared-message link. Your request reaches us only after you send it in Telegram.",
       "openDraft": "Open prepared message ↗"
     }
+  },
+  "revenue": {
+    "label": "COMPANY-REPORTED RESULTS",
+    "title": "Monthly revenue. Two sources.",
+    "period": "May — August 2026",
+    "latest": "Latest month revenue",
+    "million": "m",
+    "sinceMay": "Compared with May",
+    "growthNote": "May → August 2026",
+    "monthlyChange": "Compared with prior month",
+    "changeNote": "July → August 2026",
+    "chartTitle": "Revenue over time",
+    "bikeRevenue": "E-bike rental revenue",
+    "swapRevenue": "SWAP revenue",
+    "chartDescription": "Monthly total revenue in million UZS: May 238.5; June 371.9; July 404.6; August 382.4. Revenue fell 5.5% from July to August. Exact values are in the table below.",
+    "total": "Total revenue across four months",
+    "tableTitle": "Exact figures and operations",
+    "tableCaption": "May–August 2026. All amounts in UZS. Rental count is not a count of bikes or unique customers.",
+    "month": "Month",
+    "rentals": "Rental count",
+    "swaps": "SWAP count",
+    "totalShort": "Total",
+    "mom": "Monthly change",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "source": "Source: company-supplied table received 13 September 2026. The owner confirmed UZS currency and that “E-bike rental” counts rental events. Figures are not presented as independently audited.",
+    "limits": "These figures are revenue. Expenses, taxes and distributable net profit were not supplied in this table. They therefore do not update the investor profit calculation, which retains the earlier model assumptions."
   }
 }
