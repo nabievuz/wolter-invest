@@ -55,3 +55,7 @@ The redesign uses clear information hierarchy, concrete assets, progressive disc
 These reported revenue figures are separate from the older investment model. No net margin, updated asset base or subscription-only recurring revenue was supplied, so they are labeled monthly revenue and do not change projected investor distributions.
 
 The owner corrected the pilot period to May 2026 and supplied an admin-panel screenshot showing 2,112 total users, 189 active and 1,923 inactive. These replace the earlier pilot statistics. Active/inactive are dashboard statuses with an unspecified activity window and definition. The financial model inputs are unchanged.
+
+## Brand voice
+
+Public copy speaks as Wolter: we run the network, our results show the business, and you are the prospective partner. Use direct, concise first-person language in all three locales. Explain assumptions and contract limits in the same company voice. Keep financial figures, source qualifications and guarantees accurate; do not add unsupported promises or describe the site as an external reviewer. Visitor consent and the prepared Telegram message retain the visitor’s own voice.
