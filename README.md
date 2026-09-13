@@ -53,3 +53,5 @@ The redesign uses clear information hierarchy, concrete assets, progressive disc
 `src/lib/revenue.ts` transcribes the table supplied by the owner on 13 September 2026. The owner confirmed that monetary amounts are UZS and E-bike rental is a count of rental events. `RevenueEvidence` computes totals and month-over-month changes directly from those inputs. The chart uses a zero baseline and includes the August decline. Exact figures and operation counts remain accessible in the table.
 
 These reported revenue figures are separate from the older investment model. No net margin, updated asset base or subscription-only recurring revenue was supplied, so they are labeled monthly revenue and do not change projected investor distributions.
+
+The owner corrected the pilot period to May 2026 and supplied an admin-panel screenshot showing 2,112 total users, 189 active and 1,923 inactive. These replace the earlier pilot statistics. Active/inactive are dashboard statuses with an unspecified activity window and definition. The financial model inputs are unchanged.

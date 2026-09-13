@@ -303,10 +303,9 @@ export default function Page({
               </p>
               <div className="pilot-stats">
                 {[
-                  ["709", "users"],
-                  ["200", "bikes"],
-                  ["20", "cabinets"],
-                  ["7,440", "swaps"],
+                  ["2 112", "users"],
+                  ["189", "activeUsers"],
+                  ["1 923", "inactiveUsers"],
                 ].map(([value, label]) => (
                   <div key={label}>
                     <strong>{value}</strong>

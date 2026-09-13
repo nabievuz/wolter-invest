@@ -58,13 +58,13 @@
     "sharedNote": "Operating expenses are paid from revenue and affect your share. Check asset wear, major maintenance and insurance responsibilities in the documents.",
     "evidenceEyebrow": "04 / BEHIND THE NUMBERS",
     "evidenceTitle": "See the evidence.\nThen make your decision.",
-    "evidenceDesc": "Monthly revenue from 2026, the 2025 pilot and the investor model — each figure has its own period and calculation basis.",
-    "pilotLabel": "COMPANY-REPORTED PILOT · 2025",
-    "users": "registered users",
+    "evidenceDesc": "Monthly revenue from 2026, the May pilot and the investor model — each figure has its own period and calculation basis.",
+    "pilotLabel": "COMPANY-REPORTED PILOT · MAY 2026",
+    "users": "total users",
     "bikes": "e-bikes",
     "cabinets": "cabinets",
     "swaps": "battery exchanges",
-    "pilotNote": "Reported 48-day pilot data, not a live active-user count or an independent audit. Request updated operating results with the documents.",
+    "pilotNote": "Source: company-supplied admin panel screenshot; the company identified the period as May 2026. Active and inactive are dashboard statuses; the activity window and criteria were not specified.",
     "modelTitle": "What goes into the model?",
     "modelDesc": "Source inputs supplied in the repository. These are not presented as independently audited financial statements.",
     "modelSwap": "Swap revenue · 48 days",
@@ -96,7 +96,9 @@
     "doc3": "Asset list and risk register",
     "docNote": "Confirm document availability, currency and legal-opinion status in your conversation.",
     "footerAbout": "Mobility and power for couriers. A clear partnership for investors.",
-    "footerLegal": "GETNOW LLC · Tashkent, Uzbekistan. This page explains the proposed investment and is not a public offering of securities. Model results are illustrative; returns and capital recovery are not guaranteed. An asset-based lease structure, not company equity. Legal review is ongoing."
+    "footerLegal": "GETNOW LLC · Tashkent, Uzbekistan. This page explains the proposed investment and is not a public offering of securities. Model results are illustrative; returns and capital recovery are not guaranteed. An asset-based lease structure, not company equity. Legal review is ongoing.",
+    "activeUsers": "active users",
+    "inactiveUsers": "inactive users"
   },
   "calc": {
     "eyebrow": "02 / YOUR NUMBERS",

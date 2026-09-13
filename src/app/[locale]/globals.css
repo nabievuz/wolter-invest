@@ -1411,7 +1411,7 @@ summary::-webkit-details-marker {
 }
 .pilot-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 23px;
   padding: 27px 0;
   border-top: 1px solid #d5dacb;
@@ -2463,17 +2463,14 @@ footer {
     letter-spacing: 0.08em;
   }
   .pilot-stats {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     padding: 5px 0;
     margin-top: 20px;
   }
   .pilot-stats > div {
-    padding: 22px 15px !important;
-    gap: 8px;
-  }
-  .pilot-stats > div:nth-child(odd) {
+    padding: 20px 0;
     border-left: 0;
-    padding-left: 0 !important;
+    gap: 8px;
   }
   .pilot-stats > div:nth-child(-n + 2) {
     border-bottom: 1px solid #d5dacb;

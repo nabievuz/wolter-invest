@@ -58,13 +58,13 @@
     "sharedNote": "Operatsion xarajatlar tushumdan qoplanadi va sizning ulushingizga ta’sir qiladi. Aktiv eskirishi, katta ta’mir va sug‘urta majburiyatlarini hujjatlarda tekshiring.",
     "evidenceEyebrow": "04 / RAQAMLAR ORTIDAGI ASOS",
     "evidenceTitle": "Ko‘ring. Solishtiring.\nKeyin qaror qiling.",
-    "evidenceDesc": "2026-yildagi oylik tushumlar, 2025-yil piloti va investor modeli — har bir raqamning davri va hisoblash asosi ko‘rsatilgan.",
-    "pilotLabel": "KOMPANIYA E’LON QILGAN PILOT · 2025",
-    "users": "ro‘yxatdan o‘tgan foydalanuvchi",
+    "evidenceDesc": "2026-yildagi oylik tushumlar, may oyi piloti va investor modeli — har bir raqamning davri va hisoblash asosi ko‘rsatilgan.",
+    "pilotLabel": "KOMPANIYA E’LON QILGAN PILOT · 2026 may oyi",
+    "users": "jami foydalanuvchi",
     "bikes": "e-bike",
     "cabinets": "kabinet",
     "swaps": "batareya almashtirish",
-    "pilotNote": "48 kunlik pilot ma’lumoti. Bu bugungi faol foydalanuvchilar soni yoki mustaqil audit xulosasi emas. Yangilangan natijalarni hujjatlar to‘plamidan so‘rang.",
+    "pilotNote": "Manba: kompaniya taqdim etgan admin panel skrinshoti; davr kompaniya tomonidan 2026-yil may deb ko‘rsatilgan. “Faol” va “nofaol” — paneldagi holatlar; faollikning hisoblash davri va mezoni ko‘rsatilmagan.",
     "modelTitle": "Hisob nimaga asoslangan?",
     "modelDesc": "Repo ichidagi boshlang‘ich ma’lumotlar. Ular mustaqil tekshirilgan moliyaviy hisobot sifatida taqdim etilmaydi.",
     "modelSwap": "Almashtirish tushumi · 48 kun",
@@ -96,7 +96,9 @@
     "doc3": "Aktivlar ro‘yxati va risklar registri",
     "docNote": "Hujjatlar mavjudligi, yangiligi va yuridik xulosa holatini suhbatda aniqlashtiring.",
     "footerAbout": "Kuryerlar uchun transport va quvvat. Investor uchun tushunarli hamkorlik.",
-    "footerLegal": "GETNOW MCHJ · Toshkent, O‘zbekiston. Bu sahifa investitsiya taklifini tushuntiradi va qimmatli qog‘ozlarning ommaviy taklifi emas. Model natijalari taxminiy, daromad va kapital qaytishi kafolatlanmagan. Aktivga asoslangan ijara tuzilmasi; kompaniya ulushi sotilmaydi. Yuridik ko‘rib chiqish davom etmoqda."
+    "footerLegal": "GETNOW MCHJ · Toshkent, O‘zbekiston. Bu sahifa investitsiya taklifini tushuntiradi va qimmatli qog‘ozlarning ommaviy taklifi emas. Model natijalari taxminiy, daromad va kapital qaytishi kafolatlanmagan. Aktivga asoslangan ijara tuzilmasi; kompaniya ulushi sotilmaydi. Yuridik ko‘rib chiqish davom etmoqda.",
+    "activeUsers": "faol foydalanuvchi",
+    "inactiveUsers": "nofaol foydalanuvchi"
   },
   "calc": {
     "eyebrow": "02 / SIZNING HISOB-KITOBINGIZ",
