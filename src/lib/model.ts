@@ -1,8 +1,8 @@
-// Wolter Invest — verified financial model.
-// Mirrors the approved single-file prototype and the Excel investor model.
+// Wolter Invest — illustrative model supplied in the repository.
+// Inputs have not been independently audited. Scenario outputs are not forecasts.
 // CapEx prices (2026-06): cabinet $3,300, e-bike $410, battery $270; FX 12,000 UZS/USD.
 
-export type Scenario = 'CONS' | 'BASE' | 'UP';
+export type Scenario = "CONS" | "BASE" | "UP";
 
 export const MODEL = {
   fx: 12000, // illustrative UZS/USD rate for USD display
@@ -12,12 +12,12 @@ export const MODEL = {
   bikesPerCluster: 14,
   batteriesPerCluster: 21,
   maxClusters: 30,
-  swapNetPerCluster: ((252468870 / 48) * 30) / 14 * (1 - 0.459),
-  bikeNetPerCluster: ((134677000 / 18) * 30) / 200 * 14 * (1 - 0.1 - 0.12),
+  swapNetPerCluster: (((252468870 / 48) * 30) / 14) * (1 - 0.459),
+  bikeNetPerCluster: (((134677000 / 18) * 30) / 200) * 14 * (1 - 0.1 - 0.12),
   coeff: { CONS: 0.85, BASE: 1.0, UP: 1.15 } as Record<Scenario, number>,
   term: 48, // months
   p1: 0.7, // investor share until payback
-  p2: 0.3 // investor share after payback
+  p2: 0.3, // investor share after payback
 } as const;
 
 // One cluster's capital cost = $14,710
@@ -61,8 +61,10 @@ export interface SimRow {
 
 export interface SimResult {
   capexUsd: number;
-  payback: number; // months to full payback
+  payback: number | null; // null means capital is not recovered within the term
   monthlyIncomeUsd: number; // phase-1 monthly income
+  phase2IncomeUsd: number;
+  netGainUsd: number;
   totalUsd: number; // total payout over the term
   roi: number; // 4-year ROI
   irr: number | null; // annualized IRR
@@ -74,10 +76,24 @@ export interface SimResult {
  * Investor gets 70% of monthly net profit until cumulative payout covers
  * CapEx, then 30% for the remainder of the term.
  */
-export function simulate(clusters: number, scenario: Scenario): SimResult {
+export function simulate(
+  clusters: number,
+  scenario: Scenario,
+  profitMultiplier?: number,
+): SimResult {
+  if (
+    !Number.isInteger(clusters) ||
+    clusters < 1 ||
+    clusters > MODEL.maxClusters
+  ) {
+    throw new RangeError("Clusters must be an integer between 1 and 30");
+  }
+  const mult = profitMultiplier ?? MODEL.coeff[scenario];
+  if (!Number.isFinite(mult) || mult < 0 || mult > 2) {
+    throw new RangeError("Profit multiplier must be between 0 and 2");
+  }
   const capexUsd = clusters * CLUSTER_CAPEX;
   const capexUzs = capexUsd * MODEL.fx;
-  const mult = MODEL.coeff[scenario];
   const monthlyNet = clusters * CLUSTER_NET * mult;
 
   let cum = 0;
@@ -91,22 +107,29 @@ export function simulate(clusters: number, scenario: Scenario): SimResult {
     cum += pay;
     if (payback === null && cum >= capexUzs) payback = m;
     cf.push(pay);
-    rows.push({ m, payUsd: pay / MODEL.fx, cumUsd: cum / MODEL.fx, phase: phase1 ? 1 : 2 });
+    rows.push({
+      m,
+      payUsd: pay / MODEL.fx,
+      cumUsd: cum / MODEL.fx,
+      phase: phase1 ? 1 : 2,
+    });
   }
 
   const monthlyIrr = irr(cf);
   return {
     capexUsd,
-    payback: payback ?? MODEL.term,
+    payback,
     monthlyIncomeUsd: (MODEL.p1 * monthlyNet) / MODEL.fx,
+    phase2IncomeUsd: (MODEL.p2 * monthlyNet) / MODEL.fx,
+    netGainUsd: (cum - capexUzs) / MODEL.fx,
     totalUsd: cum / MODEL.fx,
     roi: (cum - capexUzs) / capexUzs,
     irr: monthlyIrr === null ? null : Math.pow(1 + monthlyIrr, 12) - 1,
-    rows
+    rows,
   };
 }
 
-export const SCENARIOS: Scenario[] = ['CONS', 'BASE', 'UP'];
+export const SCENARIOS: Scenario[] = ["CONS", "BASE", "UP"];
 
-export const usd = (n: number) => '$' + Math.round(n).toLocaleString('en-US');
-export const pct = (n: number) => Math.round(n * 100) + '%';
+export const usd = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
+export const pct = (n: number) => Math.round(n * 100) + "%";

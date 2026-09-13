@@ -1,74 +1,49 @@
-# Wolter Invest — investor landing (`invest.wolter.uz`)
+# Wolter Invest
 
-Trilingual (🇺🇿 uz · 🇷🇺 ru · 🇬🇧 en) investor-acquisition site for **Wolter** — a
-Tashkent battery-swap + e-bike network raising capital via an **Islom moliyasi (Ijarah)**
-profit-share. Ported from the approved single-file prototype to a production Next.js app.
+An Uzbek, Russian and English investor landing page for Wolter’s proposed asset-based e-bike and battery-swap offer. Built with Next.js 14, TypeScript and next-intl.
 
-## Stack
+## Run and check
 
-- **Next.js 14** (App Router) + **TypeScript**
-- **next-intl** for i18n (locale-prefixed routes: `/uz`, `/ru`, `/en`; default `uz`)
-- Custom CSS design system (no Tailwind) — `src/app/[locale]/globals.css`
-- No backend: the lead form hands off to Telegram via a deep link
-
-## Run
-
-```bash
-npm install
-npm run dev      # http://localhost:3000  → redirects to /uz
-```
-
-Production:
-
-```bash
+```sh
+npm ci
+npm run dev
+npm run typecheck
+npm test -- --runInBand
 npm run build
-npm run start
 ```
 
-## Structure
+Routes: `/uz`, `/ru`, `/en`. Use `localhost` for local previews so locale routing and the server hostname agree.
 
-```
-src/
-  app/[locale]/
-    layout.tsx        # html shell, fonts, NextIntlClientProvider, metadata
-    page.tsx          # all sections (server component, i18n)
-    globals.css       # full design system
-  components/
-    Nav.tsx           # client — sticky nav, language switch, mobile menu
-    Calculator.tsx    # client — returns calculator + live SVG chart + scenario table
-    LeadForm.tsx      # client — lead form → Telegram deep link
-    CountUp.tsx       # client — count-up stats on scroll
-    ScrollFX.tsx      # client — reveal-on-scroll
-    Brand.tsx         # Wolter wordmark + spark mark (SVG)
-  lib/model.ts        # verified financial model (single source of truth)
-  messages/
-    uz.json ru.json en.json   # all copy, full key parity
-  i18n/
-    routing.ts request.ts     # next-intl config
-  middleware.ts               # locale routing
-public/img/                   # product, team photos, company logos, hero
+The project produces a standalone build. Copy `public` to `.next/standalone/public` and `.next/static` to `.next/standalone/.next/static`, then run:
+
+```sh
+HOSTNAME=localhost PORT=3000 node .next/standalone/server.js
 ```
 
-## Financial model
+For a deployment host, configure its required bind address and public hostname. Existing deployment configuration remains in place.
 
-All return figures come from `src/lib/model.ts` (mirrors the Excel investor model).
-CapEx prices: cabinet **$3,300**, e-bike **$410**, battery **$270**; FX **12,000 UZS/USD**.
-1 cluster = **$14,710**; full round (30 clusters) = **$441,300**; split **70 / 30** over **48 months**.
-Base (1 cluster): payback **14 mo**, IRR **75%**, 4-yr ROI **108%**.
+## Investor experience
 
-## Compliance (do not soften)
+The first screen shows the entry amount and both profit-sharing phases. Product cards explain what is funded. The calculator separates monthly distributions, capital recovery, total receipts and gains above capital. Its stress control includes zero profit and correctly shows when capital is not recovered within 48 months.
 
-Returns are **not guaranteed** (profit-share); the investment is **asset-backed, not equity**;
-the structure follows **Islom moliyasi (Ijarah / Ijarah Muntahia Bittamleek)** principles
-aligned with AAOIFI No. 9; illiquidity, FX and regulatory risks are disclosed; the footer
-states this is not a public offering of securities.
+Company-reported pilot figures are dated and distinguished from model outputs. Assumptions, important terms and document requests are visible. Telegram prepares a message for the visitor to send; the site does not claim that the message has already been delivered.
 
-## Deploy
+## Model and evidence
 
-Target: **invest.wolter.uz**. Works on any Node host or Vercel. The `middleware.ts`
-handles locale routing; `/` redirects to the default locale.
+`src/lib/model.ts` is the calculation source, not an independently audited business forecast. It retains the inputs supplied in the original repository: $14,710 per cluster (1 cabinet, 14 e-bikes, 21 batteries), an illustrative 12,000 UZS/USD rate, and a proposed 48-month 70%/30% distribution structure. The share changes in the month after cumulative distributions recover capital. Assets are proposed to transfer to Wolter at the end; treatment of unrecovered capital needs contractual confirmation.
 
-## To finalize before launch
+The calculation normalizes swap data over 48 days and rental data over 18 days, holds profit constant, and scales clusters linearly. It omits additional replacement/repair costs, investor-specific taxes, payment delays and exchange-rate changes. The scenario multipliers have no assigned probabilities.
 
-Founder to confirm/replace: canonical contact (@nabievuz / +998 99 432 03 18),
-and any pending data-room items (securities-law opinion).
+The pilot evidence and team roles are company-reported, not independent verification. References to Ijarah describe the proposed structure, not certification. Before publication, obtain current pilot records, financial reconciliations, contracts, title/asset records and legal/Sharia review as applicable. Confirm the existing Telegram and telephone contact details.
+
+## Main files
+
+- `src/app/[locale]/page.tsx`: translated sections and server-rendered model figures.
+- `src/app/[locale]/globals.css`: responsive visual system and accessibility states.
+- `src/components/Calculator.tsx`: scenarios, chart and 48-month schedule.
+- `src/components/LeadForm.tsx`: validation and explicit Telegram handoff.
+- `src/components/Nav.tsx`: navigation, language selection and mobile menu.
+- `src/messages/{uz,ru,en}.json`: matching translation dictionaries.
+- `__tests__/model.test.ts`: cash-flow, phase-transition and stress edge cases.
+
+The redesign uses clear information hierarchy, concrete assets, progressive disclosure and reversible exploration. No neurological measurement or conversion uplift is claimed.
