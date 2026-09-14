@@ -415,8 +415,8 @@ export default function Page({
                     <img
                       src={`/img/team/${m.id}.png`}
                       alt={m.name}
-                      width="480"
-                      height="480"
+                      width="512"
+                      height="512"
                       loading="lazy"
                     />
                   </div>

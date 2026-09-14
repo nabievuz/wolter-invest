@@ -1552,36 +1552,38 @@ details[open] > summary .details-icon {
 }
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+}
+.person {
+  min-width: 0;
+  text-align: center;
 }
 .person-image {
-  height: 245px;
-  border-radius: 10px;
-  background: #e9ebe2;
-  overflow: hidden;
-  position: relative;
+  width: 100%;
+  max-width: 256px;
+  aspect-ratio: 1;
+  margin-inline: auto;
 }
 .person-image img {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 20%;
-  filter: grayscale(100%);
-  transition: filter 0.3s;
-}
-.person:hover img {
-  filter: grayscale(0);
+  object-fit: contain;
 }
 .person h3 {
-  font-size: 15px;
-  margin-top: 17px;
+  font-size: 16px;
+  line-height: 1.45;
+  margin-top: 22px;
+  text-wrap: balance;
 }
 .person-role {
   display: block;
-  margin-top: 6px;
-  font-size: 10px;
+  margin-top: 7px;
+  font-size: 12px;
+  line-height: 1.6;
   color: var(--muted);
+  text-wrap: balance;
 }
 /* Document request */
 .cta-section {
@@ -1867,9 +1869,6 @@ footer {
   .cta-grid {
     gap: 60px;
   }
-  .person-image {
-    height: 205px;
-  }
   .risk-grid {
     gap: 55px;
   }
@@ -2046,14 +2045,9 @@ footer {
   .team-section {
     padding-top: 0;
   }
-  .person-image {
-    height: 170px;
-  }
-  .person h3 {
-    font-size: 13px;
-  }
-  .person-role {
-    font-size: 9px;
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 28px;
   }
   .cta-grid {
     gap: 35px;
@@ -2520,19 +2514,14 @@ footer {
     padding-top: 0;
   }
   .team-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px 14px;
-  }
-  .person-image {
-    height: 190px;
+    gap: 28px 18px;
   }
   .person h3 {
     font-size: 13px;
     margin-top: 13px;
   }
   .person-role {
-    font-size: 10px;
-    line-height: 1.6;
+    font-size: 11px;
   }
   .cta-grid {
     grid-template-columns: 1fr;
@@ -2630,9 +2619,6 @@ footer {
   }
   .hero-actions .text-link {
     font-size: 10px;
-  }
-  .person-image {
-    height: 160px;
   }
   .payment > strong {
     font-size: 21px;
