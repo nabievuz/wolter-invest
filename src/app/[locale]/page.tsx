@@ -406,6 +406,7 @@ export default function Page({
                 <p className="eyebrow">{t("teamEyebrow")}</p>
                 <h2>{t("teamTitle")}</h2>
               </div>
+              <p>{t("teamDesc")}</p>
             </div>
             <div className="team-grid">
               {members.map((m) => (
@@ -424,6 +425,10 @@ export default function Page({
                   <span className="person-role">{m.role}</span>
                 </article>
               ))}
+            </div>
+            <div className="operations-team">
+              <h3>{t("operationsTitle")}</h3>
+              <p>{t("operationsDesc")}</p>
             </div>
             <p className="section-note">{t("teamNote")}</p>
           </div>
