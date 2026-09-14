@@ -2,7 +2,7 @@
   "name": "wolter-invest",
   "version": "1.0.0",
   "private": true,
-  "description": "Wolter Invest — investor landing for invest.wolter.uz (uz/ru/en)",
+  "description": "Wolter Invest — e-bike va batareya almashtirish tarmog‘i uchun uch tilli investor sayti",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

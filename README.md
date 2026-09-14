@@ -1,65 +1,52 @@
 # Wolter Invest
 
-An Uzbek, Russian and English investor landing page for Wolter’s proposed asset-based e-bike and battery-swap offer. Built with Next.js 14, TypeScript and next-intl.
+**Siz — aktiv egasi. Biz — operator.**
 
-## Run and check
+Biz kuryerlarni elektr velosiped va quvvat bilan ta’minlaymiz. Wolter Invest saytida jihozlarni moliyalashtirish, foydadan oylik ulush olish va biz bilan hamkorlik qilish shartlarini tushuntiramiz.
+
+[Sayt](https://invest.wolter.uz/) · [Ishga tushirish va rivojlantirish](docs/development.md) · [Ma’lumotlar va hisoblash modeli](docs/model-and-data.md)
+
+## Saytda nimalar bor?
+
+- **Hamkorlik taklifi:** bitta klaster tarkibi, jihozlar narxi va vazifasi.
+- **Interaktiv kalkulyator:** klasterlar soni, foyda ssenariylari, UZS va USD ekvivalenti, 48 oylik pul oqimi va kapital qoplanishi.
+- **Natijalarimiz:** 2026-yil may–avgust tushumlari, ijara va SWAP operatsiyalari, may oyidagi pilot ko‘rsatkichlari.
+- **Muhim shartlar:** egalik, operator mas’uliyati, ijara tuzilmasi va hujjatlar bilan tanishish.
+- **Jamoamiz:** asosiy qarorlarni qabul qiluvchi a’zolarimiz va 25 kishilik operatsion jamoamiz haqida ma’lumot.
+- **Bog‘lanish:** tashrifchi tekshirib, o‘zi yuborishi uchun Telegram xabarini tayyorlaydigan forma.
+
+Sayt o‘zbekcha, ruscha va inglizcha ishlaydi: `/uz`, `/ru`, `/en`. Dizayn telefon, planshet va desktop ekranlariga moslangan. Jamoa portretlari shaffof fonli 512×512 PNG formatida, kesilmasdan ko‘rsatiladi.
+
+## Tez ishga tushirish
+
+Node.js 22 va npm bilan:
 
 ```sh
+git clone https://github.com/nabievuz/wolter-invest.git
+cd wolter-invest
 npm ci
-npm run dev
+npm run dev -- --hostname localhost --port 3210
+```
+
+Brauzerda [localhost:3210/uz](http://localhost:3210/uz) sahifasini oching. Mahalliy manzil uchun `localhost` ishlating. Hozirgi saytni ishga tushirish uchun maxfiy kalitlar yoki `.env` fayli talab qilinmaydi.
+
+## Bizning ma’lumotlarga yondashuvimiz
+
+Amaldagi tushumlarimiz va investor kalkulyatoridagi taxminiy natijalarni alohida ko‘rsatamiz. Pul summalari, davrlar va hisob farazlarini ochiq yozamiz. Tushumni sof foyda yoki kafolatlangan investor to‘lovi sifatida talqin qilmaymiz.
+
+2026-yil 13-sentabr holatiga shu ijara tuzilmasi asosida **$250,000 investitsiya jalb qilganmiz**. Ijara tuzilmasi va yuridik xulosamiz tayyor; egalik va operator majburiyatlari shartnomada belgilangan. Bu kompaniyamiz taqdim etgan ma’lumotlar bo‘lib, repo mustaqil audit yoki yuridik xulosa o‘rnini bosmaydi.
+
+Kalkulyatorimiz 48 oylik modelga asoslanadi. Foyda, kapitalning qaytishi va texnik uzilishlarsiz ishlash kafolatlanmaydi. Raqamlarning manbasi, formulalar va cheklovlar [model hujjatida](docs/model-and-data.md) berilgan.
+
+## Texnologiyalar va tekshiruvlar
+
+Next.js 14 · React 18 · TypeScript · next-intl · Jest · Docker standalone
+
+```sh
+npm run lint
 npm run typecheck
 npm test -- --runInBand
 npm run build
 ```
 
-Routes: `/uz`, `/ru`, `/en`. Use `localhost` for local previews so locale routing and the server hostname agree.
-
-The project produces a standalone build. Copy `public` to `.next/standalone/public` and `.next/static` to `.next/standalone/.next/static`, then run:
-
-```sh
-HOSTNAME=localhost PORT=3000 node .next/standalone/server.js
-```
-
-For a deployment host, configure its required bind address and public hostname. Existing deployment configuration remains in place.
-
-## Investor experience
-
-The first screen shows the entry amount and both profit-sharing phases. Product cards explain what is funded. The calculator separates monthly distributions, capital recovery, total receipts and gains above capital. Its stress control includes zero profit and correctly shows when capital is not recovered within 48 months.
-
-Company-reported pilot figures are dated and distinguished from model outputs. Assumptions, important terms and document requests are visible. Telegram prepares a message for the visitor to send; the site does not claim that the message has already been delivered.
-
-## Model and evidence
-
-`src/lib/model.ts` is the calculation source, not an independently audited business forecast. It retains the inputs supplied in the original repository: $14,710 per cluster (1 cabinet, 14 e-bikes, 21 batteries), an illustrative 12,000 UZS/USD rate, and a proposed 48-month 70%/30% distribution structure. The share changes in the month after cumulative distributions recover capital. Assets are proposed to transfer to Wolter at the end; treatment of unrecovered capital needs contractual confirmation.
-
-The calculation normalizes swap data over 48 days and rental data over 18 days, holds profit constant, and scales clusters linearly. It omits additional replacement/repair costs, investor-specific taxes, payment delays and exchange-rate changes. The scenario multipliers have no assigned probabilities.
-
-The pilot evidence and team roles are company-reported, not independent verification. The owner confirms that the Ijarah structure is established and its legal opinion is ready; no independent Sharia certification is claimed. Before publication, obtain current pilot records, financial reconciliations, contracts, title/asset records and legal/Sharia review as applicable. Confirm the existing Telegram and telephone contact details.
-
-## Main files
-
-- `src/app/[locale]/page.tsx`: translated sections and server-rendered model figures.
-- `src/app/[locale]/globals.css`: responsive visual system and accessibility states.
-- `src/components/Calculator.tsx`: scenarios, chart and 48-month schedule.
-- `src/components/LeadForm.tsx`: validation and explicit Telegram handoff.
-- `src/components/Nav.tsx`: navigation, language selection and mobile menu.
-- `src/messages/{uz,ru,en}.json`: matching translation dictionaries.
-- `__tests__/model.test.ts`: cash-flow, phase-transition and stress edge cases.
-
-The redesign uses clear information hierarchy, concrete assets, progressive disclosure and reversible exploration. No neurological measurement or conversion uplift is claimed.
-
-## Reported revenue, May–August 2026
-
-`src/lib/revenue.ts` transcribes the table supplied by the owner on 13 September 2026. The owner confirmed that monetary amounts are UZS and E-bike rental is a count of rental events. `RevenueEvidence` computes totals and month-over-month changes directly from those inputs. The chart uses a zero baseline and includes the August decline. Exact figures and operation counts remain accessible in the table.
-
-These reported revenue figures are separate from the older investment model. No net margin, updated asset base or subscription-only recurring revenue was supplied, so they are labeled monthly revenue and do not change projected investor distributions.
-
-The owner corrected the pilot period to May 2026 and supplied an admin-panel screenshot showing 2,112 total users, 189 active and 1,923 inactive. These replace the earlier pilot statistics. Active/inactive are dashboard statuses with an unspecified activity window and definition. The financial model inputs are unchanged.
-
-## Brand voice
-
-Public copy speaks as Wolter: we run the network, our results show the business, and you are the prospective partner. Use direct, concise first-person language in all three locales. Explain assumptions and contract limits in the same company voice. Keep financial figures, source qualifications and guarantees accurate; do not add unsupported promises or describe the site as an external reviewer. Visitor consent and the prepared Telegram message retain the visitor’s own voice.
-
-## Partnership terms
-
-On 13 September 2026 the owner confirmed that the lease structure and legal opinion are settled, $250,000 has been raised under this structure, and equipment ownership and operator obligations are fully specified in the agreement. The terms section presents these company statements and equipment oversight responsibilities. It does not claim independent legal verification, guaranteed uptime or guaranteed investment returns. The raised amount is not used as revenue or as an input to projected returns.
+Production server, Docker, loyiha tuzilmasi va matnlarni yangilash qoidalari: [dasturchilar uchun yo‘riqnoma](docs/development.md).
