@@ -1,555 +1,159 @@
 {
   "meta": {
-    "title": "Wolter Invest — Own the assets, earn a share of net profit",
-    "description": "Wolter is a battery-swap and e-bike network in Tashkent. Through Islamic finance (Ijarah), own physical assets and earn a share of monthly net profit. Asset-backed, not equity."
+    "title": "Wolter Invest — physical assets, monthly profit share, clear numbers",
+    "description": "We provide bikes and power for couriers. You fund the equipment and receive a monthly share of the profit. We take care of day-to-day operations."
   },
-  "nav": {
-    "problem": "Problem",
-    "how": "How it works",
-    "structure": "Structure",
-    "calc": "Calculator",
-    "risks": "Risks",
-    "team": "Team",
-    "cta": "Request data room"
-  },
-  "hero": {
-    "badge": "Live pilot · 709+ riders on the road right now",
-    "title1": "{capex} — one cluster.",
-    "title2": "{monthly}/month — yours.",
-    "title3": "Payback in {payback} months.",
-    "lead": "You own a battery-swap cluster in Tashkent — a cabinet, 14 e-bikes, 21 batteries. Wolter runs it every day and the profit is split monthly. The harder the asset works, the more both sides earn.",
-    "flow": [
-      {
-        "value": "$14,710",
-        "label": "You invest"
-      },
-      {
-        "value": "1 cluster",
-        "label": "Asset in your name"
-      },
-      {
-        "value": "709+ riders",
-        "label": "Wolter operates"
-      },
-      {
-        "value": "70% to you",
-        "label": "Profit split monthly"
-      }
-    ],
-    "cta1": "Calculate your returns",
-    "cta2": "Request data room",
-    "disclaimer": "These figures are illustrative projections based on current pilot run-rate. Returns depend on actual net profit and are not guaranteed.",
-    "pillInLabel": "You put in",
-    "pillInSub": "one cluster price",
-    "pillOutLabel": "You get back",
-    "pillOutSub": "70% share · until payback",
-    "pillOutUnit": "mo",
-    "winwin": {
-      "youTitle": "You win",
-      "you": [
-        "The asset is legally yours — steel, not paper",
-        "70% of net profit until full payback",
-        "~75% projected IRR · monthly report & payout"
-      ],
-      "wolterTitle": "Wolter wins",
-      "wolter": [
-        "The network scales with zero capex",
-        "Operator share grows after payback",
-        "Every new cluster strengthens the network effect"
-      ],
-      "tag": "WIN-WIN",
-      "totalLabel": "Total over 48 months",
-      "caption": "Aligned incentives: keeping the asset running non-stop is the core goal of both sides. The more you earn, the more Wolter earns."
-    },
-    "imgAltCabinet": "Wolter battery-swap cabinet",
-    "imgAltBike": "Wolter delivery e-bike"
-  },
-  "ticker": [
-    "709+ Active Riders",
-    "20 Swap Stations",
-    "7,440+ Battery Swaps",
-    "48 Days of Pilot Data",
-    "75% Projected IRR",
-    "14-Month Payback",
-    "$14,710 Per Cluster",
-    "30 Clusters Available",
-    "Islamic-finance compliant",
-    "Asset-Backed Returns"
-  ],
-  "problem": {
-    "eyebrow": "The problem",
-    "title": "The battery is a courier's biggest barrier.",
-    "subtitle": "Three things cap a courier's income:",
-    "cards": [
-      {
-        "title": "Charging time",
-        "text": "Charging a battery takes hours — the courier can't work meanwhile and income stops."
-      },
-      {
-        "title": "Battery cost",
-        "text": "Owning a battery is a large outlay. Many couriers can't afford it."
-      },
-      {
-        "title": "Downtime",
-        "text": "A dead or broken battery means no orders, no income. A direct loss."
-      }
-    ],
-    "bannerPre": "Wolter solves it:",
-    "bannerStrong": "battery-as-a-service (BaaS)",
-    "bannerPost": "— swap in seconds, ~100% uptime."
-  },
-  "market": {
-    "eyebrow": "Why now",
-    "title": "The delivery economy is growing — couriers need reliable power.",
-    "cards": [
-      {
-        "title": "📈 Delivery boom",
-        "text": "E-commerce and food delivery are growing fast in Tashkent — courier numbers and daily trips keep rising."
-      },
-      {
-        "title": "⚡ Shift to electric",
-        "text": "The shift from petrol motorcycles to e-bikes is accelerating — charge and downtime remain the main barrier."
-      },
-      {
-        "title": "🔋 Battery economics",
-        "text": "The swap model cuts downtime to zero and turns a large cost into a manageable monthly fee."
-      }
-    ],
-    "note": "Exact market-size figures (TAM/SAM) are being validated by independent research — no estimated market numbers are shown on this page."
-  },
-  "how": {
-    "eyebrow": "How it works",
-    "title": "BaaS + e-bike — one ecosystem.",
-    "subtitle": "The atomic unit of investment is one balanced cluster:",
-    "products": [
-      {
-        "qty": "× 1",
-        "name": "Cabinet",
-        "desc": "Battery-swap station — with IoT, GPS and remote control."
-      },
-      {
-        "qty": "× 14",
-        "name": "E-bike",
-        "desc": "An e-bike for couriers — runs on a swappable battery."
-      },
-      {
-        "qty": "× 21",
-        "name": "Battery",
-        "desc": "Swappable battery — a continuous-operation buffer at a 1.5 : 1 ratio."
-      }
-    ],
-    "eq": [
-      "1 Cabinet",
-      "14 E-bike",
-      "21 Battery"
-    ],
-    "eqResult": "1 Cluster · $14,710",
-    "streams": [
-      {
-        "tag": "A",
-        "title": "Swap subscription + PAYG",
-        "text": "Couriers swap batteries in seconds — monthly subscription or pay-as-you-go."
-      },
-      {
-        "tag": "B",
-        "title": "E-bike rental",
-        "text": "Couriers rent an e-bike for a flexible term (7 / 14 / 30 / 60 days)."
-      }
-    ],
-    "ratioPre": "Ratio is mandatory:",
-    "ratioStrong": "battery : e-bike = 1.5 : 1",
-    "ratioPost": "— a buffer for continuous operation."
-  },
-  "compare": {
-    "eyebrow": "Why an e-bike asset",
-    "title": "Real estate takes years. A Wolter cluster takes months.",
-    "subtitle": "How fast each asset pays back:",
-    "cols": [
-      "Asset",
-      "Investment",
-      "Annual return",
-      "Payback"
-    ],
-    "rows": [
-      {
-        "asset": "Bank deposit (UZS)",
-        "invest": "—",
-        "annual": "~22%",
-        "payback": "n/a (yield)",
-        "hot": false
-      },
-      {
-        "asset": "Real estate (rental)",
-        "invest": "—",
-        "annual": "~9%",
-        "payback": "~130 mo",
-        "hot": false
-      },
-      {
-        "asset": "Wolter cluster",
-        "invest": "$14,710",
-        "annual": "75% IRR",
-        "payback": "14 mo",
-        "hot": true
-      }
-    ],
-    "note": "Wolter figures are projections based on current pilot run-rate, not a guarantee. Bank/real-estate rates are approximate market benchmarks for comparison."
-  },
-  "traction": {
-    "eyebrow": "Proof",
-    "title": "Not a projection — a working network.",
-    "stats": [
-      {
-        "value": 709,
-        "suffix": "+",
-        "label": "registered users"
-      },
-      {
-        "value": 200,
-        "suffix": "+",
-        "label": "live e-bikes"
-      },
-      {
-        "value": 20,
-        "suffix": "",
-        "label": "operating cabinets"
-      },
-      {
-        "value": 7440,
-        "suffix": "",
-        "label": "battery swaps"
-      }
-    ],
-    "source": "Source: 48-day pilot · 20 cabinets, 200 e-bikes, 300 batteries · 2025"
-  },
-  "structure": {
-    "eyebrow": "Investment structure",
-    "title": "You own the asset — we operate.",
-    "steps": [
-      {
-        "title": "Finance",
-        "text": "You finance the asset pool (on an ijara basis)."
-      },
-      {
-        "title": "Ownership",
-        "text": "All hardware is your property for the term — in your name."
-      },
-      {
-        "title": "Operate",
-        "text": "Wolter deploys to couriers, maintains and markets."
-      },
-      {
-        "title": "Income",
-        "text": "70% until payback, then 30% of net profit through month 48."
-      }
-    ],
-    "phase1Tag": "Phase 1 · 70%",
-    "phase1": "Until payback: 70% of monthly net profit to the investor — capital returns on an accelerated basis.",
-    "phase2Tag": "Phase 2 · 30%",
-    "phase2": "From payback to month 48: 30% to the investor — pure net profit.",
-    "iqtinoTag": "✓ Iqtino",
-    "iqtino": "At the end of 4 years, assets transfer to Wolter (lease-to-own).",
-    "zoneYouTitle": "Your zone",
-    "zoneYou": [
-      "Capital",
-      "Receiving reports",
-      "Transparent monitoring"
-    ],
-    "zoneWolterTitle": "Wolter's zone",
-    "zoneWolter": [
-      "Full operations",
-      "Service & marketing",
-      "Reporting & audit"
-    ],
-    "islomBadge": "☪ Islamic finance · Ijarah",
-    "islomText": "The structure is designed to conform to Islamic-finance principles — an Ijarah and Ijarah Muntahia Bittamleek (lease-to-own) model, aligned with AAOIFI Standard No. 9. The asset is held in the investor's name, ownership risk is borne by the investor, and iqtino is formalized via a separate promise."
-  },
-  "ownership": {
-    "eyebrow": "Ownership & protection",
-    "title": "What exactly you own — and what protects you.",
-    "cards": [
-      {
-        "title": "🏷️ What you own",
-        "text": "Physical assets (cabinet, e-bike, battery) are registered in your name. Not equity — income-producing property via ijara."
-      },
-      {
-        "title": "🛰️ If Wolter stops",
-        "text": "The asset stays yours. Each cabinet has GPS and remote control — location and status are tracked."
-      },
-      {
-        "title": "↗️ Exit / transfer",
-        "text": "The asset can be leased to another operator, sold, or the network transferred. Under iqtino, ownership passes to Wolter at month 48."
-      }
-    ],
-    "note": "Insurance, custody and asset-registry details are provided in documents during due diligence."
+  "site": {
+    "skip": "Skip to content",
+    "navHow": "The opportunity",
+    "navCalc": "Your returns",
+    "navEvidence": "Our results",
+    "navRisks": "Key terms",
+    "navCta": "Request documents",
+    "menu": "Menu",
+    "heroTag": "TASHKENT · ELECTRIC MOBILITY INFRASTRUCTURE",
+    "heroTitle1": "The city moves.",
+    "heroTitle2": "Your capital, too.",
+    "heroDesc": "We provide bikes and power for couriers. You fund the equipment and receive a monthly share of the profit. We take care of day-to-day operations.",
+    "entry": "Investment per cluster",
+    "entryNote": "USD equivalent · 1 cabinet + 14 e-bikes + 21 batteries",
+    "heroCta": "Calculate my share",
+    "heroSecondary": "See how it works",
+    "heroDisclosure": "We pay your share of actual profit in UZS. We do not guarantee returns. Our proposed term is 48 months; early exit is not guaranteed.",
+    "assetTag": "YOUR CLUSTER",
+    "assetCaption": "Your equipment. Our network.",
+    "projection": "OUR BASE MODEL · 1 CLUSTER",
+    "monthly": "per month",
+    "firstPhase": "70% share · until capital recovery",
+    "secondPhase": "Then a 30% share",
+    "rewardNote": "We show USD equivalents. Our calculation assumes unchanged operating profit.",
+    "benefit1Title": "You own the equipment",
+    "benefit1Text": "Under our proposed lease, the equipment stays in your name for the lease term.",
+    "benefit2Title": "We run the operation",
+    "benefit2Text": "Our team manages riders, rentals and routine maintenance.",
+    "benefit3Title": "A share of profit, every month",
+    "benefit3Text": "We show distributable profit and your share in our monthly reporting.",
+    "howEyebrow": "01 / WHAT YOUR CAPITAL PUTS TO WORK",
+    "howTitle": "One cluster.\nTwo revenue streams.",
+    "howDesc": "We bring e-bike rental and battery swapping together in one network. Your investment funds one cluster with the equipment below.",
+    "cabinet": "Swap cabinet",
+    "bike": "Electric bike",
+    "battery": "Swappable battery",
+    "cabinetDesc": "A battery exchange point in our network.",
+    "bikeDesc": "The vehicles we rent to delivery riders.",
+    "batteryDesc": "We plan for 1.5 batteries per bike.",
+    "stream1": "01 — E-bike rental",
+    "stream1Text": "We rent electric bikes to couriers and earn revenue from their rental payments.",
+    "stream2": "02 — Battery swapping",
+    "stream2Text": "We earn revenue from our battery service through subscriptions or payments per use.",
+    "flowEyebrow": "03 / HOW WE SHARE PROFIT",
+    "flowTitle": "Know your share.\nAt every stage.",
+    "flowDesc": "We offer a 48-month partnership. The agreements we sign together define our respective rights and responsibilities.",
+    "phase1Title": "Until capital recovery",
+    "phase2Title": "Then, through month 48",
+    "phase1Text": "We allocate 70% of distributable net profit to you and 30% to us.",
+    "phase2Text": "We allocate 30% of distributable net profit to you and 70% to us.",
+    "phaseEnd": "At the end of month 48",
+    "phaseEndText": "Our model transfers the assets to us at the end of month 48. Before signing, clarify with us what happens if your capital has not been recovered.",
+    "sharedNote": "We cover operating expenses from revenue, which affects your profit share. Review responsibilities for wear, major maintenance and insurance with us in the contracts.",
+    "evidenceEyebrow": "04 / OUR RESULTS AND CALCULATIONS",
+    "evidenceTitle": "Our results,\nopen for you to see.",
+    "evidenceDesc": "Here we share our 2026 revenue, our May pilot and the investor calculation. We explain the period and basis behind each set of figures.",
+    "pilotLabel": "OUR PILOT RESULTS · MAY 2026",
+    "users": "total users",
+    "bikes": "e-bikes",
+    "cabinets": "cabinets",
+    "swaps": "battery exchanges",
+    "pilotNote": "These are the user counts in our admin panel for our May 2026 pilot. Active and inactive are statuses in our dashboard. We have not specified the activity window or criteria here.",
+    "modelTitle": "How do we calculate your share?",
+    "modelDesc": "We share the starting figures in our financial model. We do not provide an independent audit opinion for this calculation.",
+    "modelSwap": "Swap revenue · 48 days",
+    "modelRental": "Rental revenue · 18 days",
+    "modelCost": "Cost assumptions",
+    "modelCostValue": "Swaps 45.9% · bike service 10% + VAT 12%",
+    "modelExplain": "We normalize swap revenue to 30 days and divide it across 14 model clusters. We scale rental revenue from a base of 200 bikes to 14 bikes in a new cluster. We deduct the cost percentages before sharing profit.",
+    "modelLimits": "We hold profit flat for 48 months in this calculation. We exclude additional replacement costs, investor taxes, delays and exchange-rate changes. We increase the input ratio of 10 bikes per cabinet to 14 in a new cluster.",
+    "sourceLink": "View our calculation formulas ↗",
+    "risksEyebrow": "05 / THE TERMS THAT MATTER",
+    "risksTitle": "Clear agreements.\nOngoing oversight.",
+    "risksDesc": "Your ownership and our responsibilities are set out in the agreement. We track your equipment and manage daily operations to keep it in working condition.",
+    "risk1Title": "How is your profit share determined?",
+    "risk1Text": "We pay your share from the actual net profit of our operations. The calculation applies a 70% share until capital recovery and 30% thereafter. Results depend on revenue and costs: profit may fall or be zero. We do not guarantee returns or capital recovery; some or all of your capital may be lost.",
+    "risk2Title": "Payments, term and exit",
+    "risk2Text": "We pay in UZS; the dollar equivalent depends on the exchange rate. The partnership term is 48 months. Review the agreement’s provisions for the end of the term and early exit. We do not guarantee an early sale or exit.",
+    "risk3Title": "Your ownership. Our responsibility.",
+    "risk3Text": "Equipment ownership, use and our duties as operator are fully set out in the agreement. We track each unit, monitor its technical condition and organize servicing. Keeping the equipment in working condition is our team’s daily responsibility.",
+    "risk4Title": "Lease structure and legal opinion",
+    "risk4Text": "Our partnership follows the Ijarah / Ijarah Muntahia Bittamleek lease model. Our lease structure is established and our legal opinion is ready. We already work with partners on this basis. Review our agreement and legal opinion before making your decision.",
+    "teamEyebrow": "06 / OUR TEAM",
+    "teamTitle": "We run the network.",
+    "teamDesc": "Meet our core decision-making team at Wolter. We make the key decisions about our network’s development and partnerships.",
+    "operationsTitle": "Our 25-person operations team",
+    "operationsDesc": "Our operations team of 25 handles the daily work: supporting couriers, rentals, battery swaps and equipment maintenance. We set the direction, and our operations team puts it into practice every day.",
+    "teamNote": "Our advisors’ involvement does not guarantee your capital or returns.",
+    "ctaEyebrow": "YOUR NEXT STEP",
+    "ctaTitle": "Let’s look at\nthe numbers together.",
+    "ctaDesc": "Get in touch. We can discuss our financial model, partnership terms and your questions together. Contacting us does not commit you to invest.",
+    "doc1": "Financial model and pilot report",
+    "doc2": "Lease and asset-transfer agreements",
+    "doc3": "Asset list and risk register",
+    "docNote": "Review our agreement, legal opinion and your partnership questions with our team.",
+    "footerAbout": "We keep couriers supplied with bikes and power. We invite you to partner with our network.",
+    "footerLegal": "GETNOW LLC (Wolter) · Tashkent, Uzbekistan. Here we explain our proposed asset-based lease partnership. We are not selling company equity; this is not a public offering of securities. Our calculations are illustrative and we do not guarantee returns or capital recovery.",
+    "activeUsers": "active users",
+    "inactiveUsers": "inactive users",
+    "raisedLabel": "INVESTMENT RAISED",
+    "raisedText": "Raised from our partners under this lease structure.",
+    "raisedDate": "As of 13 September 2026",
+    "risk3Care": "If equipment develops a fault, we take all necessary steps to restore its operation. Technical downtime is possible; our obligations and how we fulfil them are defined in the agreement.",
+    "termsCta": "Review the agreement",
+    "legalCta": "Request the agreement and legal opinion ↗"
   },
   "calc": {
-    "eyebrow": "Calculator",
-    "title": "What you put in — what comes back.",
-    "subtitle": "Pick the number of clusters and a scenario — results update live.",
-    "clustersLabel": "Number of clusters",
-    "clustersUnit": "clusters",
-    "presetFull": "full",
-    "scenarioLabel": "Scenario",
-    "scenarios": {
-      "CONS": {
-        "name": "Conservative",
-        "hint": "−15% demand"
-      },
-      "BASE": {
-        "name": "Standard",
-        "hint": "real run-rate"
-      },
-      "UP": {
-        "name": "Upside",
-        "hint": "+15% demand"
-      }
-    },
-    "out": {
-      "capex": "Investment (CapEx)",
-      "payback": "Full payback",
-      "monthly": "Monthly income · Phase 1",
-      "roi": "ROI · 4 years",
-      "irr": "IRR · annual",
-      "total": "Total return over 4 years"
-    },
-    "monthUnit": "mo",
-    "legend": {
-      "p1": "Phase 1 · 70%",
-      "p2": "Phase 2 · 30%",
-      "payback": "Payback"
-    },
-    "chartX": [
-      "mo 1",
-      "mo 24",
-      "mo 48"
-    ],
-    "paybackMarker": "Payback · {m} mo",
-    "tableCols": [
-      "Scenario",
-      "Payback",
-      "Monthly · Phase 1",
-      "Total over 4y",
-      "ROI · 4y",
-      "IRR"
-    ],
-    "fxSteps": [
-      "USD entered",
-      "Locked to UZS (day-1 rate)",
-      "Everything in UZS"
-    ],
-    "note": "Figures shown in USD for convenience (rate 12,000). No FX risk for a UZS-based investor. Basis: the current pilot's real run-rate, no growth assumed (flat) — conservative.",
-    "noteWarn": "Returns are not guaranteed and depend on actual net profit."
-  },
-  "funds": {
-    "eyebrow": "Where the money goes",
-    "title": "Every dollar into a physical asset.",
-    "subtitle": "100% of the investment goes to hardware — all in your name, with IoT control (full round = 30 clusters):",
-    "cols": [
-      "Asset",
-      "Qty × price",
-      "Value",
-      "Share"
-    ],
-    "rows": [
-      {
-        "asset": "E-bikes",
-        "qty": "420 × $410",
-        "value": "$172,200",
-        "share": "39%"
-      },
-      {
-        "asset": "Batteries",
-        "qty": "630 × $270",
-        "value": "$170,100",
-        "share": "39%"
-      },
-      {
-        "asset": "Cabinets",
-        "qty": "30 × $3,300",
-        "value": "$99,000",
-        "share": "22%"
-      }
-    ],
-    "totalLabel": "Total CapEx",
-    "total": "$441,300",
-    "alloc": [
-      {
-        "label": "E-bike",
-        "share": "39%"
-      },
-      {
-        "label": "Battery",
-        "share": "39%"
-      },
-      {
-        "label": "Cabinet",
-        "share": "22%"
-      }
-    ],
-    "note": "Operating costs (service, marketing, lease) are on Wolter — not from the investment, covered from revenue."
-  },
-  "report": {
-    "eyebrow": "Transparency",
-    "title": "What you receive every month.",
-    "subtitle": "A monthly report based on a double-entry append-only ledger — sample format (1 cluster, Standard):",
-    "head": "Monthly report · sample",
-    "tag": "1 cluster · UZS",
-    "rows": [
-      {
-        "label": "Gross revenue (swap + e-bike)",
-        "value": "26 983 248",
-        "kind": "normal"
-      },
-      {
-        "label": "Operating costs",
-        "value": "− 8 630 068",
-        "kind": "warn"
-      },
-      {
-        "label": "Net profit",
-        "value": "18 353 180",
-        "kind": "total"
-      },
-      {
-        "label": "Your share (Phase 1 · 70%)",
-        "value": "12 847 226",
-        "kind": "hl"
-      },
-      {
-        "label": "Cumulative return / payback status",
-        "value": "≈ 70% · 10/14 mo",
-        "kind": "normal"
-      }
-    ],
-    "note": "This is a format sample — figures are filled from the real ledger each month. Depreciation is borne by the asset owner (you) per AAOIFI, excluded from profit-share."
-  },
-  "roadmap": {
-    "eyebrow": "Scale",
-    "title": "From Tashkent — to the CIS.",
-    "items": [
-      {
-        "when": "Now",
-        "title": "Tashkent · Pilot",
-        "text": "20 cabinets, 709 users — proven unit economics.",
-        "hot": false
-      },
-      {
-        "when": "This round",
-        "title": "Tashkent · Expansion",
-        "text": "+30 clusters — network density and cabinet utilization.",
-        "hot": true
-      },
-      {
-        "when": "Next",
-        "title": "All of Uzbekistan",
-        "text": "A multi-city, multi-tenant BaaS platform.",
-        "hot": false
-      },
-      {
-        "when": "Vision",
-        "title": "CIS markets",
-        "text": "Regional expansion with enterprise fleet clients.",
-        "hot": false
-      }
-    ]
-  },
-  "risks": {
-    "eyebrow": "Transparency",
-    "title": "Every risk is accounted for.",
-    "subtitle": "Asset-backed ijara — risks are structurally protected:",
-    "cards": [
-      {
-        "icon": "🛡️",
-        "title": "Asset in your name",
-        "text": "Even if the company closes, the asset is yours — it can be leased to another operator.",
-        "warn": false
-      },
-      {
-        "icon": "🧱",
-        "title": "Ring-fenced project",
-        "text": "Returns come only from this asset pool's net profit.",
-        "warn": false
-      },
-      {
-        "icon": "📡",
-        "title": "IoT control",
-        "text": "Every asset has GPS + remote lock. No payment — no operation.",
-        "warn": false
-      },
-      {
-        "icon": "✅",
-        "title": "Real network",
-        "text": "709 users, a live pilot — not a projection.",
-        "warn": false
-      },
-      {
-        "icon": "☪",
-        "title": "Islamic finance (Ijarah)",
-        "text": "Risk-sharing, no riba, asset-backed — an Ijarah structure.",
-        "warn": false
-      },
-      {
-        "icon": "⏳",
-        "title": "Illiquidity risk",
-        "text": "This investment is illiquid for the 48-month term — an early-exit mechanism is not guaranteed.",
-        "warn": true
-      },
-      {
-        "icon": "💱",
-        "title": "FX risk (USD)",
-        "text": "Capital and returns are fixed in UZS; som depreciation reduces USD returns.",
-        "warn": true
-      },
-      {
-        "icon": "⚖️",
-        "title": "Regulatory risk",
-        "text": "Changes in Uzbekistan's financial regulation may affect this structure.",
-        "warn": true
-      }
-    ],
-    "sensTitle": "Sensitivity — investor monthly income as net profit falls:",
-    "sens": [
-      {
-        "k": "−10%",
-        "mult": 0.9
-      },
-      {
-        "k": "−25%",
-        "mult": 0.75
-      },
-      {
-        "k": "−40%",
-        "mult": 0.6
-      }
-    ],
-    "sensNote": "1 cluster, relative to Phase-1 income (Standard). Returns are not guaranteed and depend on actual net profit. Full risk register (22) — in the financial model and data room."
-  },
-  "faq": {
-    "eyebrow": "Questions",
-    "title": "Frequently asked questions.",
-    "items": [
-      {
-        "q": "Are returns guaranteed?",
-        "a": "No — this is profit-share. Returns depend on actual net profit, so we show scenarios (Conservative–Upside) openly. A guaranteed rate would be riba and contrary to Islamic-finance principles."
-      },
-      {
-        "q": "What exactly do I own?",
-        "a": "Physical assets — cabinet, e-bike, battery — in your name. This is asset-backed, not equity."
-      },
-      {
-        "q": "What if Wolter shuts down?",
-        "a": "The asset stays yours. Each has GPS + remote lock — it can be transferred to another operator or sold."
-      },
-      {
-        "q": "How is net profit calculated?",
-        "a": "Revenue minus operating costs (swap 45.9%, e-bike service + VAT 22%). Depreciation is borne by the asset owner (you) per AAOIFI, excluded from profit-share."
-      },
-      {
-        "q": "Minimum and how am I paid?",
-        "a": "From $14,710 (1 cluster). Monthly in UZS: 70% until payback, then 30% through month 48."
-      }
-    ]
+    "eyebrow": "02 / YOUR NUMBERS",
+    "title": "Choose your investment.\nUnderstand your returns.",
+    "desc": "Choose your cluster count and our model will calculate your monthly share and illustrative 48-month cash flows. We also show the assumptions behind the numbers.",
+    "clusters": "Number of clusters",
+    "unit": "{count, plural, one {# cluster} other {# clusters}}",
+    "currency": "Display currency",
+    "usd": "USD equivalent",
+    "uzs": "UZS",
+    "scenario": "Profit scenario",
+    "base": "Base",
+    "lower": "Lower",
+    "upper": "Higher",
+    "scenarioNote": "We apply −15% / 0% / +15% to net profit. We have not assigned probabilities to these scenarios.",
+    "stress": "What if profit falls further?",
+    "stressLabel": "Share of base profit remaining",
+    "stressNote": "0% means no profit; 100% is our base calculation. Use this to explore a drop in profit; we are not predicting future results.",
+    "reset": "Reset to base",
+    "invest": "Investment",
+    "month": "months",
+    "perMonth": "/ month",
+    "phase1": "Until capital recovery · 70%",
+    "phase2": "Following phase · 30%",
+    "noPhase2": "Phase 2 is not reached within 48 months",
+    "payback": "Modeled capital recovery",
+    "notRecovered": "Not recovered in 48 months",
+    "gain": "Receipts above capital · 48 months",
+    "shortfall": "Unrecovered capital · 48 months",
+    "gainNote": "Before additional investor costs and taxes.",
+    "chartTitle": "Cumulative payments",
+    "chartDesc": "The capital line marks your initial investment; the chart is not the asset’s market value.",
+    "chartLabel": "Modeled cumulative payments over 48 months",
+    "capital": "Capital",
+    "monthZero": "Start",
+    "total": "Total receipts over 48 months",
+    "roi": "48-month ROI",
+    "irr": "Annualized IRR",
+    "irrNote": "IRR accounts for cash-flow timing. It is not a fixed annual payment or a guaranteed rate.",
+    "note": "This is our illustrative calculation. We pay in UZS and use an assumed rate of 1 USD = 12,000 UZS for USD display, not a live rate. We hold profit flat for 48 months. We do not guarantee full capital recovery or early exit.",
+    "limits": "We exclude additional maintenance/replacements, investor taxes, delays and FX changes. We scale results in proportion to cluster count and change the share in the month after capital recovery.",
+    "source": "See our calculation assumptions",
+    "schedule": "48-month payment schedule",
+    "payment": "Monthly payment",
+    "cumulative": "Total paid",
+    "phase": "Share"
   },
   "team": {
     "eyebrow": "Team",
@@ -590,73 +194,56 @@
     ]
   },
   "cta": {
-    "eyebrow": "Next step",
-    "title": "Request the document package.",
-    "subtitle": "We'll send the detailed financial model, pitch deck and contract templates.",
-    "steps": [
-      "Intro",
-      "Presentation",
-      "Financial model",
-      "Contracts",
-      "Signing"
-    ],
     "form": {
       "name": "Name",
       "namePh": "Your name",
       "contact": "Email or Telegram",
       "contactPh": "@username or email",
       "range": "Investment range",
-      "ranges": [
-        "Up to $15k",
-        "$15k – 50k",
-        "$50k – 150k",
-        "$150k+"
-      ],
+      "ranges": ["Up to $15k", "$15k – 50k", "$50k – 150k", "$150k+"],
       "msg": "Message (optional)",
-      "msgPh": "Question or note...",
+      "msgPh": "Write your question to us...",
       "consent": "I consent to being contacted by GETNOW LLC (Wolter) regarding this investment opportunity. I understand that my data is transmitted via Telegram and is not stored on GETNOW LLC servers.",
-      "send": "Send request",
+      "send": "Continue in Telegram",
       "errName": "Enter your name",
       "errContact": "Enter email or Telegram",
       "errConsent": "Consent is required to continue",
-      "directPre": "or directly:",
-      "privacy": "This form collects your name, email or Telegram handle, investment range, and an optional message. When you press 'Send', this information is passed to the Telegram app and used to make direct contact with @nabievuz. It is not stored on GETNOW LLC servers.",
+      "directPre": "or contact us directly:",
+      "privacy": "Continue in Telegram opens a prepared message with your details. We do not send them to our website’s server. You review and send the message yourself in Telegram.",
       "tgMessage": "Hello! I'm interested in Wolter Invest.\nName: {name}\nContact: {contact}\nInvestment range: {range}",
       "tgMessageMsg": "\nMessage: {msg}",
-      "toast": "Thanks! The Telegram window opened with a ready message."
-    },
-    "askRoundLabel": "Full round",
-    "askRoundVal": "$441,300",
-    "askRoundSub": "30 clusters · full expansion",
-    "askMinLabel": "Minimum entry",
-    "askMinVal": "$14,710",
-    "askMinSub": "1 cluster · entry point",
-    "dataroomTitle": "Data room contents",
-    "dataroom": [
-      "Financial model (Excel)",
-      "Pitch deck",
-      "Ijara + iqtino contract template",
-      "Pilot P&L and unit-economics",
-      "Ledger / accounting design",
-      "Hardware and asset specs",
-      "Risk register (22)"
-    ],
-    "dataroomSoon": [
-      "Securities-law opinion — during DD"
-    ]
+      "toast": "Review and send your message in Telegram.",
+      "handoff": "If Telegram does not open, use the prepared-message link. Your request reaches us after you send it in Telegram.",
+      "openDraft": "Open prepared message ↗"
+    }
   },
-  "footer": {
-    "about": "A battery-swap (BaaS) and e-bike rental network in Tashkent. Continuous power for couriers.",
-    "location": "Location: Tashkent, Uzbekistan",
-    "contactTitle": "Contact",
-    "contactDocs": "Request the document package",
-    "sectionsTitle": "Sections",
-    "links": {
-      "how": "How it works",
-      "structure": "Investment structure",
-      "calc": "Returns calculator",
-      "risks": "Risks"
-    },
-    "legal": "Wolter Invest · Legal entity: GETNOW LLC. © 2026 Wolter (GETNOW LLC). Illustrative projection — based on current pilot run-rate. Profit-share structure: returns depend on actual net profit, not guaranteed or fixed. The investment is asset-backed (secured by physical assets), not equity. This page does not constitute a public offering of securities. Legal review in progress."
+  "revenue": {
+    "label": "OUR RESULTS",
+    "title": "Our revenue. Two sources.",
+    "period": "May — August 2026",
+    "latest": "Our latest month’s revenue",
+    "million": "m",
+    "sinceMay": "Compared with May",
+    "growthNote": "May → August 2026",
+    "monthlyChange": "Compared with prior month",
+    "changeNote": "July → August 2026",
+    "chartTitle": "Our revenue over time",
+    "bikeRevenue": "E-bike rental revenue",
+    "swapRevenue": "SWAP revenue",
+    "chartDescription": "Monthly total revenue in million UZS: May 238.5; June 371.9; July 404.6; August 382.4. Revenue fell 5.5% from July to August. Exact values are in the table below.",
+    "total": "Total revenue across four months",
+    "tableTitle": "Exact figures and operations",
+    "tableCaption": "May–August 2026. All amounts in UZS. Rental count is not a count of bikes or unique customers.",
+    "month": "Month",
+    "rentals": "Rental count",
+    "swaps": "SWAP count",
+    "totalShort": "Total",
+    "mom": "Monthly change",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "source": "This is our internal revenue report for May–August 2026. We show amounts in UZS and count rental events. We do not provide an independent audit opinion for these figures.",
+    "limits": "We show revenue here; we have not included expenses, taxes or distributable net profit in this table. Our investor calculator uses a separate model — we have not replaced its profit assumptions with these revenue figures."
   }
 }

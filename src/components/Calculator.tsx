@@ -1,216 +1,343 @@
-'use client';
-
-import { useState } from 'react';
-import { useTranslations } from 'next-intl';
+"use client";
+import { useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   simulate,
-  SCENARIOS,
   MODEL,
-  usd,
   pct,
   type Scenario,
-  type SimResult
-} from '@/lib/model';
+  type SimResult,
+} from "@/lib/model";
 
+type Currency = "USD" | "UZS";
 const PRESETS = [1, 5, 15, 30];
 
-function Chart({ sim, marker }: { sim: SimResult; marker: (m: number) => string }) {
-  const W = 720,
-    H = 250,
-    padL = 8,
-    padR = 8,
-    padT = 14,
-    padB = 14;
-  const rows = sim.rows;
-  const ymax = Math.max(sim.totalUsd, sim.capexUsd) * 1.06;
-  const X = (m: number) => padL + ((m - 1) / (MODEL.term - 1)) * (W - padL - padR);
-  const Y = (v: number) => H - padB - (v / ymax) * (H - padT - padB);
-  const pb = sim.payback;
-  const y0 = Y(0);
-  const yCap = Y(sim.capexUsd);
-  const p1 = rows.filter((r) => r.m <= pb).map((r) => `${X(r.m)},${Y(r.cumUsd)}`);
-  const p2 = rows.filter((r) => r.m >= pb).map((r) => `${X(r.m)},${Y(r.cumUsd)}`);
-  const area1 = `M${X(1)},${y0} L${p1.join(' L')} L${X(pb)},${y0} Z`;
-  const area2 = p2.length > 1 ? `M${X(pb)},${y0} L${p2.join(' L')} L${X(MODEL.term)},${y0} Z` : '';
-  const line1 = `M${p1.join(' L')}`;
-  const line2 = p2.length > 1 ? `M${p2.join(' L')}` : '';
-  const xPb = X(pb);
-
+function Chart({
+  sim,
+  money,
+  label,
+  capital,
+}: {
+  sim: SimResult;
+  money: (n: number) => string;
+  label: string;
+  capital: string;
+}) {
+  const W = 800,
+    H = 240,
+    left = 2,
+    right = W - 2,
+    top = 32,
+    bottom = H - 14;
+  const max = Math.max(sim.capexUsd, sim.totalUsd) * 1.2;
+  const x = (m: number) => left + (m / MODEL.term) * (right - left);
+  const y = (amount: number) => bottom - (amount / max) * (bottom - top);
+  const points = [{ m: 0, cumUsd: 0 }, ...sim.rows];
+  const line = points
+    .map((p, i) => `${i ? "L" : "M"} ${x(p.m)} ${y(p.cumUsd)}`)
+    .join(" ");
+  const paybackRow =
+    sim.payback === null ? undefined : sim.rows[sim.payback - 1];
   return (
-    <svg id="chart" viewBox="0 0 720 250" preserveAspectRatio="none" aria-label="Cumulative return chart">
+    <svg
+      className="return-chart"
+      viewBox={`0 0 ${W} ${H}`}
+      role="img"
+      aria-label={label}
+    >
+      <title>{label}</title>
       <defs>
-        <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#D4FF00" stopOpacity=".42" />
-          <stop offset="1" stopColor="#D4FF00" stopOpacity="0" />
-        </linearGradient>
-        <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#37E0A0" stopOpacity=".34" />
-          <stop offset="1" stopColor="#37E0A0" stopOpacity="0" />
+        <linearGradient id="return-fill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#d3f36b" stopOpacity=".22" />
+          <stop offset="100%" stopColor="#d3f36b" stopOpacity="0" />
         </linearGradient>
       </defs>
-      <line x1={padL} y1={yCap} x2={W - padR} y2={yCap} stroke="rgba(255,255,255,.28)" strokeWidth="1" strokeDasharray="4 5" />
-      <text x={W - padR} y={yCap - 6} fill="rgba(255,255,255,.55)" fontSize="11" textAnchor="end" fontFamily="Inter">
-        CapEx {usd(sim.capexUsd)}
+      {[0.25, 0.5, 0.75].map((n) => (
+        <line
+          key={n}
+          x1={left}
+          x2={right}
+          y1={y(max * n)}
+          y2={y(max * n)}
+          stroke="#ffffff0c"
+        />
+      ))}
+      <line
+        x1={left}
+        x2={right}
+        y1={y(sim.capexUsd)}
+        y2={y(sim.capexUsd)}
+        stroke="#9ba29a"
+        strokeDasharray="4 5"
+      />
+      <text
+        x={right}
+        y={y(sim.capexUsd) - 9}
+        textAnchor="end"
+        fill="#b9c0b4"
+        fontSize="12"
+      >
+        {capital} · {money(sim.capexUsd)}
       </text>
-      {area2 && <path d={area2} fill="url(#g2)" />}
-      <path d={area1} fill="url(#g1)" />
-      {line2 && <path d={line2} fill="none" stroke="#37E0A0" strokeWidth="2.4" strokeLinejoin="round" />}
-      <path d={line1} fill="none" stroke="#D4FF00" strokeWidth="2.6" strokeLinejoin="round" />
-      <line x1={xPb} y1={padT} x2={xPb} y2={H - padB} stroke="#F4B560" strokeWidth="1.6" strokeDasharray="3 4" />
-      <circle cx={xPb} cy={Y(rows[pb - 1].cumUsd)} r="4.5" fill="#F4B560" />
-      <text x={xPb + (pb > 40 ? -6 : 6)} y={padT + 12} fill="#F4B560" fontSize="11.5" fontFamily="Inter" textAnchor={pb > 40 ? 'end' : 'start'}>
-        {marker(pb)}
-      </text>
+      <path
+        d={`${line} L ${right} ${bottom} L ${left} ${bottom} Z`}
+        fill="url(#return-fill)"
+      />
+      <path
+        d={line}
+        fill="none"
+        stroke="#d3f36b"
+        strokeWidth="3"
+        strokeLinejoin="round"
+      />
+      {paybackRow && (
+        <>
+          <line
+            x1={x(paybackRow.m)}
+            x2={x(paybackRow.m)}
+            y1={y(paybackRow.cumUsd)}
+            y2={bottom}
+            stroke="#d3f36b66"
+            strokeDasharray="3 5"
+          />
+          <circle
+            cx={x(paybackRow.m)}
+            cy={y(paybackRow.cumUsd)}
+            r="5"
+            fill="#d3f36b"
+          />
+        </>
+      )}
+      <circle cx={right} cy={y(sim.totalUsd)} r="4" fill="#d3f36b" />
     </svg>
   );
 }
 
 export default function Calculator() {
-  const t = useTranslations('calc');
+  const t = useTranslations("calc");
   const [clusters, setClusters] = useState(1);
-  const [scenario, setScenario] = useState<Scenario>('BASE');
-
-  const sim = simulate(clusters, scenario);
-  const mo = t('monthUnit');
-  const fill = ((clusters - 1) / (MODEL.maxClusters - 1)) * 100;
-  const chartX = t.raw('chartX') as string[];
-  const tableCols = t.raw('tableCols') as string[];
-  const fxSteps = t.raw('fxSteps') as string[];
+  const [scenario, setScenario] = useState<Scenario>("BASE");
+  const [currency, setCurrency] = useState<Currency>("USD");
+  const [stress, setStress] = useState<number | null>(null);
+  const sim = simulate(clusters, scenario, stress ?? undefined);
+  const money = (n: number) =>
+    currency === "USD"
+      ? "$" + Math.round(n).toLocaleString("en-US")
+      : Math.round(n * MODEL.fx)
+          .toLocaleString("en-US")
+          .replaceAll(",", " ") + " UZS";
+  const isRecovered = sim.payback !== null;
+  const hasSecondPhase = sim.rows.some((row) => row.phase === 2);
+  const scenarios: { id: Scenario; key: string; value: string }[] = [
+    { id: "CONS", key: "lower", value: "−15%" },
+    { id: "BASE", key: "base", value: "100%" },
+    { id: "UP", key: "upper", value: "+15%" },
+  ];
 
   return (
-    <div className="calc-panel reveal">
-      <div className="calc-grid">
-        {/* CONTROLS */}
+    <div className="calculator">
+      <div className="calc-layout">
         <div className="calc-controls">
-          <div className="ctrl">
-            <label>{t('clustersLabel')}</label>
-            <div className="readout">
-              <span id="cl-count">{clusters}</span>
-              <span className="ro-unit">{t('clustersUnit')}</span>
-            </div>
-            <input
-              type="range"
-              min={1}
-              max={MODEL.maxClusters}
-              step={1}
-              value={clusters}
-              aria-label={t('clustersLabel')}
-              className="range"
-              style={{
-                background: `linear-gradient(90deg,var(--lime) ${fill}%,rgba(255,255,255,.1) ${fill}%)`
-              }}
-              onChange={(e) => setClusters(Number(e.target.value))}
-            />
-            <div className="presets">
-              {PRESETS.map((c) => (
+          <div className="control-label">
+            <label htmlFor="cluster-range">{t("clusters")}</label>
+            <span>{String(clusters).padStart(2, "0")}</span>
+          </div>
+          <div className="investment-readout">
+            <strong>{money(sim.capexUsd)}</strong>
+            <span>{t("unit", { count: clusters })}</span>
+          </div>
+          <input
+            id="cluster-range"
+            type="range"
+            min="1"
+            max={MODEL.maxClusters}
+            step="1"
+            value={clusters}
+            onChange={(e) => setClusters(Number(e.target.value))}
+          />
+          <div className="presets">
+            {PRESETS.map((n) => (
+              <button
+                key={n}
+                aria-pressed={clusters === n}
+                onClick={() => setClusters(n)}
+              >
+                {n}
+              </button>
+            ))}
+          </div>
+          <fieldset className="currency-control">
+            <legend>{t("currency")}</legend>
+            <div className="segmented">
+              {(["USD", "UZS"] as const).map((unit) => (
                 <button
-                  key={c}
-                  className={'preset' + (c === clusters ? ' on' : '')}
-                  onClick={() => setClusters(c)}
+                  key={unit}
+                  aria-pressed={currency === unit}
+                  onClick={() => setCurrency(unit)}
                 >
-                  {c === MODEL.maxClusters ? `${c} · ${t('presetFull')}` : c}
+                  {t(unit.toLowerCase())}
                 </button>
               ))}
             </div>
-          </div>
-          <div className="ctrl">
-            <label>{t('scenarioLabel')}</label>
-            <div className="scns">
-              {SCENARIOS.map((s) => (
+          </fieldset>
+          <fieldset>
+            <legend>{t("scenario")}</legend>
+            <div className="scenarios">
+              {scenarios.map((s) => (
                 <button
-                  key={s}
-                  className={'scn' + (s === scenario ? ' on' : '')}
-                  onClick={() => setScenario(s)}
+                  key={s.id}
+                  aria-pressed={stress === null && scenario === s.id}
+                  onClick={() => {
+                    setScenario(s.id);
+                    setStress(null);
+                  }}
                 >
-                  <b>{t(`scenarios.${s}.name`)}</b>
-                  <i>{t(`scenarios.${s}.hint`)}</i>
+                  <span>{t(s.key)}</span>
+                  <strong>{s.value}</strong>
                 </button>
               ))}
             </div>
-          </div>
+            <p className="control-note">{t("scenarioNote")}</p>
+          </fieldset>
+          <details className="stress-control">
+            <summary>
+              {t("stress")}
+              <span aria-hidden="true">+</span>
+            </summary>
+            <div>
+              <label htmlFor="stress-range">
+                {t("stressLabel")}
+                <strong>
+                  {Math.round((stress ?? MODEL.coeff[scenario]) * 100)}%
+                </strong>
+              </label>
+              <input
+                id="stress-range"
+                type="range"
+                min="0"
+                max="125"
+                step="5"
+                value={Math.round((stress ?? MODEL.coeff[scenario]) * 100)}
+                onChange={(e) => setStress(Number(e.target.value) / 100)}
+              />
+              <p className="control-note">{t("stressNote")}</p>
+              <button
+                className="reset-button"
+                onClick={() => {
+                  setStress(null);
+                  setScenario("BASE");
+                }}
+              >
+                {t("reset")} ↗
+              </button>
+            </div>
+          </details>
         </div>
-
-        {/* OUTPUTS */}
-        <div className="calc-out">
-          <div className="outs">
-            <div className="out">
-              <div className="ol">{t('out.capex')}</div>
-              <div className="ov">{usd(sim.capexUsd)}</div>
+        <div className="calc-results">
+          <div className="payment-grid" aria-live="polite" aria-atomic="true">
+            <div className="payment first">
+              <span>{t("phase1")}</span>
+              <strong>{money(sim.monthlyIncomeUsd)}</strong>
+              <small>{t("perMonth")}</small>
             </div>
-            <div className="out hot">
-              <div className="ol">{t('out.payback')}</div>
-              <div className="ov">{sim.payback} {mo}</div>
-            </div>
-            <div className="out">
-              <div className="ol">{t('out.monthly')}</div>
-              <div className="ov">{usd(sim.monthlyIncomeUsd)}</div>
-            </div>
-            <div className="out">
-              <div className="ol">{t('out.roi')}</div>
-              <div className="ov">{pct(sim.roi)}</div>
-            </div>
-            <div className="out">
-              <div className="ol">{t('out.irr')}</div>
-              <div className="ov">{sim.irr === null ? '—' : pct(sim.irr)}</div>
-            </div>
-            <div className="out">
-              <div className="ol">{t('out.total')}</div>
-              <div className="ov">{usd(sim.totalUsd)}</div>
+            <div className="payment">
+              <span>{t("phase2")}</span>
+              <strong>
+                {hasSecondPhase ? money(sim.phase2IncomeUsd) : "—"}
+              </strong>
+              <small>{hasSecondPhase ? t("perMonth") : t("noPhase2")}</small>
             </div>
           </div>
-          <div className="chart-wrap">
-            <div className="legend">
-              <span><i className="lg1" />{t('legend.p1')}</span>
-              <span><i className="lg2" />{t('legend.p2')}</span>
-              <span><i className="lg3" />{t('legend.payback')}</span>
+          <div className="calc-summary">
+            <div>
+              <span>{t("payback")}</span>
+              <strong className={!isRecovered ? "caution" : ""}>
+                {isRecovered
+                  ? `${sim.payback} ${t("month")}`
+                  : t("notRecovered")}
+              </strong>
             </div>
-            <Chart sim={sim} marker={(m) => t('paybackMarker', { m })} />
-            <div className="chart-x">
-              {chartX.map((x, i) => (
-                <span key={i}>{x}</span>
-              ))}
+            <div>
+              <span>{t(sim.netGainUsd >= 0 ? "gain" : "shortfall")}</span>
+              <strong className={sim.netGainUsd < 0 ? "caution" : ""}>
+                {money(Math.abs(sim.netGainUsd))}
+              </strong>
             </div>
           </div>
+          <div className="chart-header">
+            <span>{t("chartTitle")}</span>
+            <span>0 — 48 {t("month")}</span>
+          </div>
+          <Chart
+            sim={sim}
+            money={money}
+            label={t("chartLabel")}
+            capital={t("capital")}
+          />
+          <div className="chart-axis">
+            <span>{t("monthZero")}</span>
+            <span>24 {t("month")}</span>
+            <span>48 {t("month")}</span>
+          </div>
+          <p className="control-note chart-caption">{t("chartDesc")}</p>
+          <div className="return-totals">
+            <div>
+              <span>{t("total")}</span>
+              <strong>{money(sim.totalUsd)}</strong>
+            </div>
+            <div>
+              <span>{t("roi")}</span>
+              <strong>{pct(sim.roi)}</strong>
+            </div>
+            <div>
+              <span>{t("irr")}</span>
+              <strong>{sim.irr === null ? "—" : pct(sim.irr)}</strong>
+            </div>
+          </div>
+          <p className="control-note">
+            {t("gainNote")} {t("irrNote")}
+          </p>
         </div>
       </div>
-
-      <table className="tbl scn-tbl" style={{ marginTop: 22 }}>
-        <thead>
-          <tr>
-            {tableCols.map((c, i) => (
-              <th key={i}>{c}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {SCENARIOS.map((s) => {
-            const r = simulate(clusters, s);
-            return (
-              <tr key={s} className={s === scenario ? 'live' : ''}>
-                <td>{t(`scenarios.${s}.name`)}</td>
-                <td>{r.payback} {mo}</td>
-                <td>{usd(r.monthlyIncomeUsd)}</td>
-                <td>{usd(r.totalUsd)}</td>
-                <td>{pct(r.roi)}</td>
-                <td>{r.irr === null ? '—' : pct(r.irr)}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-
-      <div className="calc-foot">
-        <div className="fx-steps">
-          <span>{fxSteps[0]}</span>
-          <span>→</span>
-          <span>{fxSteps[1]}</span>
-          <span>→</span>
-          <span>{fxSteps[2]}</span>
-        </div>
-        <p className="note" style={{ marginTop: 0 }}>
-          {t('note')} <b style={{ color: 'var(--warn)' }}>{t('noteWarn')}</b>
+      <div className="calc-disclosures">
+        <p>{t("note")}</p>
+        <p>
+          {t("limits")} <a href="#model">{t("source")} ↗</a>
         </p>
       </div>
+      <details className="schedule">
+        <summary>
+          {t("schedule")}
+          <span aria-hidden="true">+</span>
+        </summary>
+        <div
+          className="table-scroll"
+          tabIndex={0}
+          role="region"
+          aria-label={t("schedule")}
+        >
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">{t("month")}</th>
+                <th scope="col">{t("phase")}</th>
+                <th scope="col">{t("payment")}</th>
+                <th scope="col">{t("cumulative")}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sim.rows.map((row) => (
+                <tr key={row.m}>
+                  <th scope="row">{row.m}</th>
+                  <td>{row.phase === 1 ? "70%" : "30%"}</td>
+                  <td>{money(row.payUsd)}</td>
+                  <td>{money(row.cumUsd)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </details>
     </div>
   );
 }

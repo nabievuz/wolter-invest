@@ -1,47 +1,40 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
-import { usePathname, useRouter } from '@/i18n/routing';
-import { routing } from '@/i18n/routing';
-import { Spark, Wordmark } from './Brand';
-
-const LANG_LABELS: Record<string, string> = { uz: 'UZ', ru: 'RU', en: 'EN' };
+"use client";
+import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
+import { usePathname, useRouter, routing } from "@/i18n/routing";
+import { Wordmark } from "./Brand";
 
 export default function Nav({ locale }: { locale: string }) {
-  const t = useTranslations('nav');
+  const t = useTranslations("site");
   const pathname = usePathname();
   const router = useRouter();
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    const escape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", escape);
+    return () => window.removeEventListener("keydown", escape);
   }, []);
-
-  const links: [string, string][] = [
-    ['#problem', t('problem')],
-    ['#how', t('how')],
-    ['#structure', t('structure')],
-    ['#calc', t('calc')],
-    ['#risks', t('risks')],
-    ['#team', t('team')]
-  ];
-
   return (
-    <nav className={'nav' + (scrolled ? ' scrolled' : '')}>
-      <div className="wrap nav-in">
+    <nav className="nav">
+      <div className="wrap nav-inner">
         <a className="brand" href="#top" aria-label="Wolter">
-          <Spark />
           <Wordmark />
+          <span>INVEST</span>
         </a>
-        <div className={'nav-links' + (open ? ' open' : '')}>
-          {links.map(([href, label]) => (
+        <div
+          className={"nav-links" + (open ? " open" : "")}
+          id="navigation-links"
+        >
+          {[
+            ["#how", "navHow"],
+            ["#calc", "navCalc"],
+            ["#evidence", "navEvidence"],
+            ["#risks", "navRisks"],
+          ].map(([href, key]) => (
             <a key={href} href={href} onClick={() => setOpen(false)}>
-              {label}
+              {t(key)}
             </a>
           ))}
         </div>
@@ -50,18 +43,28 @@ export default function Nav({ locale }: { locale: string }) {
             {routing.locales.map((lc) => (
               <button
                 key={lc}
-                className={lc === locale ? 'on' : ''}
-                onClick={() => router.replace(pathname, { locale: lc })}
+                aria-pressed={lc === locale}
+                onClick={() => {
+                  setOpen(false);
+                  router.replace(pathname, { locale: lc });
+                }}
               >
-                {LANG_LABELS[lc]}
+                {lc.toUpperCase()}
               </button>
             ))}
           </div>
-          <a href="#cta" className="btn btn-primary nav-cta">
-            {t('cta')}
+          <a className="btn btn-dark nav-cta" href="#cta">
+            {t("navCta")}
+            <span aria-hidden="true">↗</span>
           </a>
-          <button className="burger" aria-label="Menu" onClick={() => setOpen((o) => !o)}>
-            ☰
+          <button
+            className="burger"
+            aria-label={t("menu")}
+            aria-expanded={open}
+            aria-controls="navigation-links"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? "×" : "☰"}
           </button>
         </div>
       </div>
